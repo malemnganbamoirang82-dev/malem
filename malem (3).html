@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malem — Built from Manipur. Built for the World.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --w:#ffffff;
+  --off:#f4f5f9;
+  --ink:#05060f;
+  --ink2:#2b2d3e;
+  --muted:#8589a3;
+  --blue:#004ff9;
+  --g:linear-gradient(45deg,#004ff9,#000000);
+  --g135:linear-gradient(135deg,#004ff9 0%,#001a80 60%,#000 100%);
+  --gtext:linear-gradient(100deg,#004ff9,#0028b0,#000);
+  --border:#e4e6f0;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Space Grotesk',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* CURSOR */
+#cur{position:fixed;width:8px;height:8px;background:var(--blue);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:multiply;transform:translate(-50%,-50%);transition:width .3s,height .3s}
+#cur2{position:fixed;width:32px;height:32px;border:1.5px solid rgba(0,79,249,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s}
+@media(max-width:768px){#cur,#cur2{display:none}}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--ink);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;transition:opacity .6s .1s,visibility .6s .1s}
+#loader.out{opacity:0;visibility:hidden}
+.ll img{height:46px;object-fit:contain;filter:brightness(10);animation:lp 1.2s ease-in-out infinite}
+.lb{width:180px;height:2px;background:rgba(255,255,255,.1);border-radius:1px;overflow:hidden}
+.lf{height:100%;width:0;background:var(--g);border-radius:1px;transition:width .05s linear}
+@keyframes lp{0%,100%{opacity:.5}50%{opacity:1}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 5vw;height:70px;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+nav.sc{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--border)}
+.nl img{height:36px;object-fit:contain}
+.nls{display:flex;gap:30px;list-style:none}
+.nls a{font-size:13px;font-weight:500;color:var(--ink2);letter-spacing:.03em;transition:color .2s;position:relative}
+.nls a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--blue);transition:width .3s}
+.nls a:hover{color:var(--blue)}
+.nls a:hover::after{width:100%}
+.nc{background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:9px 20px;border-radius:100px;letter-spacing:.04em;transition:all .25s}
+.nc:hover{background:linear-gradient(45deg,#004ff9,#000);box-shadow:0 6px 24px rgba(0,79,249,.35)}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;cursor:pointer}
+.hbg span{width:22px;height:2px;background:var(--ink);border-radius:2px;display:block;transition:.3s}
+
+/* MOBILE */
+.mob{position:fixed;inset:0;background:var(--w);z-index:600;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0 8vw;gap:8px;clip-path:circle(0% at calc(100% - 50px) 35px);transition:clip-path .55s cubic-bezier(.77,0,.175,1)}
+.mob.open{clip-path:circle(150% at calc(100% - 50px) 35px)}
+.mob a{font-family:'Fraunces',serif;font-size:clamp(2rem,7vw,3.6rem);font-weight:700;color:var(--ink);transition:color .2s;line-height:1.3}
+.mob a:hover{color:var(--blue)}
+.mob-x{position:absolute;top:20px;right:5vw;font-size:26px;cursor:pointer;color:var(--muted);background:none;border:none}
+.mob-foot{margin-top:28px;font-size:13px;color:var(--muted)}
+.mob-foot a{color:var(--blue)}
+
+/* HERO */
+#hero{min-height:100svh;display:flex;align-items:center;padding:100px 5vw 80px;position:relative;overflow:hidden}
+.hb{position:absolute;pointer-events:none;border-radius:50%;filter:blur(90px)}
+.hb1{width:65vw;height:65vw;max-width:780px;max-height:780px;background:radial-gradient(circle at 30%,rgba(0,79,249,.11),transparent 70%);top:-25%;right:-15%;animation:bm 14s ease-in-out infinite}
+.hb2{width:45vw;height:45vw;max-width:560px;max-height:560px;background:radial-gradient(circle,rgba(0,10,80,.08),transparent 70%);bottom:-20%;left:-8%;animation:bm 18s ease-in-out infinite reverse}
+@keyframes bm{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(3%,-4%) scale(1.06)}66%{transform:translate(-3%,3%) scale(.95)}}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,79,249,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,79,249,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 70% 50%,black 20%,transparent 75%);pointer-events:none}
+.hi{position:relative;z-index:2;max-width:1200px;width:100%;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.htag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,79,249,.07);border:1px solid rgba(0,79,249,.18);padding:6px 14px;border-radius:100px;margin-bottom:30px;opacity:0;animation:au .7s .3s forwards}
+.htag-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);animation:bl 2s infinite}
+@keyframes bl{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,79,249,.4)}50%{opacity:.3;box-shadow:0 0 0 5px transparent}}
+.htag span{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+h1{font-family:'Fraunces',serif;font-size:clamp(3rem,5.5vw,5.8rem);line-height:1.02;font-weight:700;margin-bottom:26px;opacity:0;animation:au .8s .45s forwards}
+h1 em{font-style:italic;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hp{font-size:clamp(.95rem,1.4vw,1.12rem);color:var(--ink2);line-height:1.82;max-width:490px;font-weight:300;opacity:0;animation:au .8s .6s forwards}
+.hbtns{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap;opacity:0;animation:au .8s .75s forwards}
+.bg{display:inline-flex;align-items:center;gap:8px;background:var(--g);color:#fff;font-weight:600;font-size:14px;padding:13px 26px;border-radius:100px;letter-spacing:.04em;box-shadow:0 8px 32px rgba(0,79,249,.28);transition:all .3s}
+.bg:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,79,249,.4)}
+.bg svg{transition:transform .3s}
+.bg:hover svg{transform:translateX(4px)}
+.bo{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink);font-weight:600;font-size:14px;padding:13px 26px;border-radius:100px;border:1.5px solid var(--border);letter-spacing:.04em;transition:all .3s}
+.bo:hover{border-color:var(--blue);color:var(--blue);background:rgba(0,79,249,.04)}
+.hr{opacity:0;animation:fi .9s 1s forwards}
+.hcm{background:var(--g135);border-radius:26px;padding:32px;color:#fff;position:relative;overflow:hidden}
+.hcm::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
+.hcm-lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:8px}
+.hcm-logo{height:44px;object-fit:contain;margin-bottom:18px;filter:brightness(10)}
+.hcm-p{font-size:14px;opacity:.75;line-height:1.7;font-weight:300}
+.hcm-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:6px 14px;font-size:12px;margin-top:18px;font-weight:500}
+.hcm-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:#4ade80;animation:bl 2s infinite}
+.hfcs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.hfc{background:var(--w);border:1px solid var(--border);border-radius:18px;padding:16px 18px;transition:box-shadow .3s,transform .3s}
+.hfc:hover{box-shadow:0 8px 28px rgba(0,79,249,.1);transform:translateY(-3px)}
+.hfc-i{font-size:20px;margin-bottom:8px}
+.hfc-n{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hfc-l{font-size:11px;color:var(--muted)}
+.hscroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:au .7s 1.5s forwards}
+.hs-t{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hs-l{width:1px;height:42px;background:linear-gradient(to bottom,var(--blue),transparent);animation:lb2 2s ease-in-out infinite}
+@keyframes lb2{0%,100%{transform:scaleY(1);opacity:.7}50%{transform:scaleY(.4);opacity:.25}}
+@keyframes au{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+
+/* TICKER */
+.tkr{background:var(--ink);overflow:hidden;padding:13px 0;white-space:nowrap}
+.tkr-t{display:inline-flex;animation:tk 32s linear infinite}
+.tkr-i{display:inline-flex;align-items:center;gap:12px;padding:0 28px;font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.tkr-sep{color:var(--blue);font-size:14px}
+@keyframes tk{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SHARED */
+.s{padding:clamp(80px,10vw,130px) 5vw}
+.si{max-width:1200px;margin:0 auto}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+.chip::before{content:'';width:18px;height:2px;background:var(--g)}
+.h2{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:1.1;color:var(--ink)}
+.h2 em{font-style:italic;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ld{font-size:clamp(.92rem,1.3vw,1.08rem);color:var(--ink2);line-height:1.85;font-weight:300;max-width:550px}
+
+/* ABOUT */
+#about{background:var(--w)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,96px);align-items:center}
+.av{position:relative}
+.av-img{width:100%;height:clamp(300px,40vw,520px);object-fit:cover;border-radius:22px}
+.av-badge{position:absolute;top:-16px;right:-16px;background:var(--g);color:#fff;border-radius:16px;padding:14px 18px;text-align:center;box-shadow:0 8px 28px rgba(0,79,249,.35);animation:flt 5s ease-in-out infinite}
+@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.av-badge-n{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:700;display:block;line-height:1}
+.av-badge-l{font-size:10px;opacity:.7;letter-spacing:.06em}
+.av-pill{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);background:var(--w);border:1px solid var(--border);border-radius:100px;padding:11px 22px;display:flex;align-items:center;gap:12px;white-space:nowrap;box-shadow:0 14px 44px rgba(0,0,0,.1)}
+.av-pill-g{width:9px;height:9px;border-radius:50%;background:#4ade80;animation:bl 2s infinite}
+.av-pill-t{font-size:13px;font-weight:600}
+.at .ld{margin:18px 0 28px}
+.acols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.acol{background:var(--off);border-radius:14px;padding:20px;border:1px solid var(--border)}
+.acol-t{font-weight:700;font-size:14px;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.acol-b{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* MANIFESTO */
+#man{background:var(--off);padding:clamp(80px,10vw,130px) 5vw;text-align:center}
+.man-t{font-family:'Fraunces',serif;font-size:clamp(1.8rem,4vw,3.4rem);font-weight:700;line-height:1.25;max-width:880px;margin:0 auto}
+.man-t .gt{background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.man-t .it{font-style:italic}
+.man-s{font-size:clamp(.95rem,1.3vw,1.05rem);color:var(--muted);max-width:520px;margin:28px auto 0;line-height:1.8;font-weight:300}
+
+/* MISSION BENTO */
+#mission{background:var(--ink);padding:clamp(80px,10vw,130px) 5vw}
+#mission .chip{color:#6690ff}
+#mission .chip::before{background:linear-gradient(90deg,#6690ff,#004ff9)}
+#mission .h2{color:#fff}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:48px}
+.bc{border-radius:22px;padding:30px;border:1px solid rgba(255,255,255,.07);transition:border-color .3s,transform .3s;position:relative;overflow:hidden}
+.bc:hover{border-color:rgba(0,79,249,.4);transform:translateY(-4px)}
+.bc1{grid-column:span 5;background:rgba(255,255,255,.03)}
+.bc2{grid-column:span 7;background:var(--g135)}
+.bc2::after{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.07),transparent);border-radius:50%}
+.bc3{grid-column:span 4;background:rgba(0,79,249,.11);border-color:rgba(0,79,249,.2)}
+.bc4{grid-column:span 4;background:rgba(255,255,255,.03)}
+.bc5{grid-column:span 4;background:rgba(255,255,255,.03)}
+.bc-i{font-size:2rem;margin-bottom:18px}
+.bc-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:9px;font-weight:600}
+.bc-h{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:10px}
+.bc-h.lg{font-size:clamp(1.5rem,2.3vw,1.9rem)}
+.bc-p{font-size:14px;color:rgba(255,255,255,.52);line-height:1.75;font-weight:300}
+.bc-n{font-family:'Fraunces',serif;font-size:4rem;font-weight:700;background:linear-gradient(135deg,#6690ff,#004ff9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:10px}
+
+/* RECOVA */
+#recova{background:var(--w);padding:clamp(80px,10vw,130px) 5vw}
+.rhd{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:58px}
+.rlz{display:flex;align-items:center;gap:14px}
+.rlz img{height:52px;object-fit:contain}
+.rlz-d{width:1px;height:36px;background:var(--border)}
+.rlz-l{font-size:12px;color:var(--muted)}
+.rb{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:start}
+.rl .ld{margin:18px 0 32px}
+.rfs{display:flex;flex-direction:column;gap:11px}
+.rfi{display:flex;gap:14px;align-items:flex-start;background:var(--off);border:1px solid var(--border);border-radius:16px;padding:18px 20px;transition:all .3s;cursor:default}
+.rfi:hover{background:#fff;border-color:rgba(0,79,249,.25);box-shadow:0 8px 28px rgba(0,79,249,.1);transform:translateX(5px)}
+.rfi-i{width:38px;height:38px;border-radius:11px;background:var(--g);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.rfi-h{font-weight:700;font-size:13px;margin-bottom:3px}
+.rfi-b{font-size:12px;color:var(--muted);line-height:1.6}
+.rdash{background:var(--ink);border-radius:26px;padding:26px;position:sticky;top:90px}
+.rdb{display:flex;align-items:center;gap:7px;margin-bottom:24px}
+.rdd{width:9px;height:9px;border-radius:50%}
+.rdt{flex:1;height:7px;background:rgba(255,255,255,.05);border-radius:4px;margin-left:8px}
+.rdss{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:22px}
+.rds{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:13px;padding:13px;text-align:center;transition:background .3s}
+.rds:hover{background:rgba(0,79,249,.14)}
+.rdsv{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:700;background:linear-gradient(135deg,#6690ff,#3370ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.rdsl{font-size:10px;color:rgba(255,255,255,.38);margin-top:3px}
+.rdct{font-size:10px;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.1em;margin-bottom:13px}
+.rdr{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.rdrl{font-size:11px;color:rgba(255,255,255,.42);width:72px;text-align:right;flex-shrink:0}
+.rdtr{flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
+.rdfi{height:100%;border-radius:3px;background:linear-gradient(90deg,#6690ff,#004ff9);transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+.rdfi.go{transform:scaleX(1)}
+.rdrv{font-size:11px;color:rgba(255,255,255,.5);width:30px;font-weight:600}
+.rdac{display:flex;flex-direction:column;gap:7px;margin-top:18px}
+.rdai{display:flex;align-items:center;gap:9px;padding:9px 13px;background:rgba(255,255,255,.03);border-radius:9px;border:1px solid rgba(255,255,255,.05)}
+.rdaid{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.rdait{font-size:12px;color:rgba(255,255,255,.58)}
+.rdatime{font-size:10px;color:rgba(255,255,255,.28);margin-left:auto}
+
+/* JOURNEY */
+#journey{background:var(--w);padding:clamp(80px,10vw,130px) 5vw}
+.jg{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;position:relative}
+.jg::before{content:'';position:absolute;top:27px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,var(--blue) 20%,var(--blue) 80%,transparent)}
+.ji{padding:20px 18px;text-align:center}
+.ji-n{width:54px;height:54px;border-radius:50%;background:var(--w);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--muted);transition:all .4s;position:relative;z-index:2}
+.ji.act .ji-n,.ji:hover .ji-n{background:var(--g);border-color:var(--blue);color:#fff;box-shadow:0 6px 24px rgba(0,79,249,.3)}
+.ji-ph{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:7px}
+.ji-h{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;margin-bottom:9px}
+.ji-b{font-size:13px;color:var(--muted);line-height:1.65}
+
+/* CONTACT */
+#contact{background:var(--ink);padding:clamp(80px,10vw,130px) 5vw}
+#contact .chip{color:#6690ff}
+#contact .chip::before{background:linear-gradient(90deg,#6690ff,#004ff9)}
+#contact .h2{color:#fff}
+.cg{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(40px,6vw,90px);margin-top:48px;align-items:start}
+.cl .ld{color:rgba(255,255,255,.52);margin:18px 0 36px}
+.cls{display:flex;flex-direction:column;gap:11px}
+.cli{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 22px;transition:all .3s;color:rgba(255,255,255,.8)}
+.cli:hover{background:rgba(0,79,249,.14);border-color:rgba(0,79,249,.38);transform:translateX(7px)}
+.ci-ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.ci-ico.wa{background:#025c4c}
+.ci-ico.em{background:rgba(0,79,249,.28)}
+.ci-ico.fb{background:#1877f2}
+.ci-lbl{font-size:10px;color:rgba(255,255,255,.33);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.ci-val{font-size:14px;font-weight:500}
+.ci-arr{margin-left:auto;color:rgba(255,255,255,.28);transition:all .3s}
+.cli:hover .ci-arr{transform:translateX(4px);color:rgba(255,255,255,.6)}
+.cr-map{background:linear-gradient(135deg,#04051a,#071440);border:1px solid rgba(0,79,249,.2);border-radius:22px;height:300px;position:relative;overflow:hidden;margin-bottom:14px}
+.crd{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,79,249,.32) 1px,transparent 1px);background-size:25px 25px;animation:dd 18s linear infinite}
+@keyframes dd{0%{background-position:0 0}100%{background-position:25px 25px}}
+.crg{position:absolute;width:280px;height:280px;background:radial-gradient(circle,rgba(0,79,249,.18),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
+.crpin{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2}
+.crring{width:68px;height:68px;border-radius:50%;background:rgba(0,79,249,.14);border:1.5px solid rgba(0,79,249,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 11px;animation:pr 3s ease-in-out infinite}
+@keyframes pr{0%,100%{box-shadow:0 0 0 0 rgba(0,79,249,.4)}50%{box-shadow:0 0 0 20px rgba(0,79,249,0)}}
+.crin{width:38px;height:38px;background:var(--g);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px}
+.crl{color:#fff;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700}
+.crs{color:rgba(255,255,255,.46);font-size:12px}
+.cris{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.cri{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px 16px}
+.cri-l{font-size:10px;color:rgba(255,255,255,.32);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
+.cri-v{font-size:13px;color:rgba(255,255,255,.7);font-weight:500}
+
+/* FOOTER */
+footer{background:#02030a;padding:44px 5vw 30px;border-top:1px solid rgba(255,255,255,.05)}
+.ft{display:flex;justify-content:space-between;align-items:flex-start;gap:36px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.06)}
+.fb img{height:32px;margin-bottom:12px;object-fit:contain}
+.fb p{font-size:13px;color:rgba(255,255,255,.33);max-width:250px;line-height:1.7;font-weight:300}
+.fc h5{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:16px;font-weight:600}
+.fc a{display:block;font-size:13px;color:rgba(255,255,255,.52);margin-bottom:10px;transition:color .2s}
+.fc a:hover{color:#6690ff}
+.fb2{display:flex;justify-content:space-between;align-items:center;padding-top:26px;flex-wrap:wrap;gap:12px}
+.fb2 p{font-size:12px;color:rgba(255,255,255,.24)}
+.fb2 span{background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700}
+
+/* REVEAL */
+[data-r]{opacity:0;transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-r="up"]{transform:translateY(44px)}
+[data-r="left"]{transform:translateX(-44px)}
+[data-r="right"]{transform:translateX(44px)}
+[data-r="scale"]{transform:scale(.93)}
+[data-r].vis{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hi,.ag,.rb,.cg{grid-template-columns:1fr}
+  .hr{display:none}
+  .rdash{position:static}
+  .bento .bc1,.bento .bc2{grid-column:span 12}
+  .bento .bc3,.bento .bc4,.bento .bc5{grid-column:span 4}
+}
+@media(max-width:768px){
+  .nls,.nc{display:none}
+  .hbg{display:flex}
+  .jg{grid-template-columns:1fr 1fr}
+  .jg::before{display:none}
+  .ft{flex-direction:column}
+  .acols{grid-template-columns:1fr}
+  .bento .bc3,.bento .bc4,.bento .bc5{grid-column:span 12}
+  .rdss{grid-template-columns:1fr 1fr}
+  .cris{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .jg{grid-template-columns:1fr}
+  .hbtns{flex-direction:column}
+  .hbtns a{justify-content:center;text-align:center}
+  .hfcs{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ll"><img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-17%20111235.png" alt="Malem"></div>
+  <div class="lb"><div class="lf" id="lf"></div></div>
+</div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur2"></div>
+
+<!-- MOBILE -->
+<div class="mob" id="mob">
+  <button class="mob-x" onclick="closeMob()">✕</button>
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#mission" onclick="closeMob()">Mission</a>
+  <a href="#recova" onclick="closeMob()">Recova AI</a>
+  <a href="#journey" onclick="closeMob()">Journey</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <div class="mob-foot">Reach us at <a href="mailto:malem.site@gmail.com">malem.site@gmail.com</a></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nl"><img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-17%20111235.png" alt="Malem"></div>
+  <ul class="nls">
+    <li><a href="#about">About</a></li>
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#recova">Recova AI</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nc" href="#contact">Get in Touch</a>
+  <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hb hb1"></div>
+  <div class="hb hb2"></div>
+  <div class="hgrid"></div>
+  <div class="hi">
+    <div class="hl">
+      <div class="htag"><div class="htag-dot"></div><span>Manipur · India · World</span></div>
+      <h1>Where Bold<br>Vision Meets<br><em>Real Code.</em></h1>
+      <p class="hp">Malem is a technology company rising from Manipur — building world-class products that prove great innovation can emerge from anywhere on Earth.</p>
+      <div class="hbtns">
+        <a href="#recova" class="bg">
+          Explore Recova AI
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#about" class="bo">Our Story</a>
+      </div>
+    </div>
+    <div class="hr">
+      <div class="hcm">
+        <div class="hcm-lbl">Our First Product</div>
+        <img class="hcm-logo" src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-12%20085625.png?updatedAt=1775964532274" alt="Recova AI">
+        <p class="hcm-p">AI-powered debt recovery and collections — designed to help organizations recover smarter, faster, and more efficiently.</p>
+        <div class="hcm-tag">Currently in Development</div>
+      </div>
+      <div class="hfcs">
+        <div class="hfc"><div class="hfc-i">🏔️</div><div class="hfc-n">Manipur</div><div class="hfc-l">Home & Origin</div></div>
+        <div class="hfc"><div class="hfc-i">🌍</div><div class="hfc-n">Global</div><div class="hfc-l">Our Ambition</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hscroll"><span class="hs-t">Scroll</span><div class="hs-l"></div></div>
+</section>
+
+<!-- TICKER -->
+<div class="tkr">
+  <div class="tkr-t" id="tt"></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="s">
+  <div class="si">
+    <div class="ag">
+      <div class="av" data-r="left">
+        <img class="av-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80" alt="Technology">
+        <div class="av-badge"><span class="av-badge-n">2025</span><span class="av-badge-l">Founded</span></div>
+        <div class="av-pill"><div class="av-pill-g"></div><span class="av-pill-t">Building from Manipur, India</span></div>
+      </div>
+      <div class="at" data-r="right">
+        <div class="chip">Who We Are</div>
+        <h2 class="h2">Born from<br><em>Overlooked</em><br>Soil.</h2>
+        <p class="ld">Malem was built on a radical belief — that great companies can rise from anywhere. With the right vision, discipline, and courage, Manipur can produce technology that competes on a global level.</p>
+        <p class="ld" style="margin-top:14px;max-width:100%">We exist to prove that talent, ambition, and original thinking can create something powerful from places the world has yet to notice. We represent a new generation of builders from Manipur — determined to create lasting value for businesses, industries, and society.</p>
+        <div class="acols" style="margin-top:28px">
+          <div class="acol"><div class="acol-t">🧠 Bold Vision</div><div class="acol-b">Seeing what others can't and building toward it anyway.</div></div>
+          <div class="acol"><div class="acol-t">⚡ Discipline</div><div class="acol-b">Consistent, focused execution over flashy shortcuts.</div></div>
+          <div class="acol"><div class="acol-t">🔥 Courage</div><div class="acol-b">The nerve to build something big from somewhere small.</div></div>
+          <div class="acol"><div class="acol-t">🌏 Global Scale</div><div class="acol-b">Products built for the world, not just the neighbourhood.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section id="man">
+  <div class="si" style="max-width:900px">
+    <div class="man-t" data-r="up"><span class="it gt">Innovation</span> is not a privilege of big cities. It belongs to anyone with the <span class="gt">courage to build.</span></div>
+    <p class="man-s" data-r="up" style="transition-delay:.15s">We are not waiting for permission. We are building belief, creating opportunity, and writing a new story for what Manipur can produce for the world.</p>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="si">
+    <div data-r="up">
+      <div class="chip">Our Purpose</div>
+      <h2 class="h2">Mission.<br><em>Vision.</em> Values.</h2>
+    </div>
+    <div class="bento">
+      <div class="bc bc1" data-r="up" style="transition-delay:.05s">
+        <div class="bc-i">🏔️</div>
+        <div class="bc-tag">Mission</div>
+        <div class="bc-h lg">Build a global tech giant from Manipur.</div>
+        <div class="bc-p">Create meaningful solutions for real-world problems and make Manipur proud through excellence, innovation, and impact.</div>
+      </div>
+      <div class="bc bc2" data-r="up" style="transition-delay:.1s">
+        <div class="bc-tag">Vision</div>
+        <div class="bc-h lg">Build from Manipur. Solve for the world.</div>
+        <div class="bc-p" style="margin-top:12px">Create technology that truly matters — intelligent systems that solve hard business problems with clarity, speed, and precision.</div>
+      </div>
+      <div class="bc bc3" data-r="up" style="transition-delay:.15s">
+        <div class="bc-n">01</div>
+        <div class="bc-h">Belief</div>
+        <div class="bc-p">We build belief — in ourselves, in Manipur, and in what's possible.</div>
+      </div>
+      <div class="bc bc4" data-r="up" style="transition-delay:.2s">
+        <div class="bc-n">02</div>
+        <div class="bc-h">Opportunity</div>
+        <div class="bc-p">Creating doors that didn't exist — for builders from overlooked places.</div>
+      </div>
+      <div class="bc bc5" data-r="up" style="transition-delay:.25s">
+        <div class="bc-n">03</div>
+        <div class="bc-h">Legacy</div>
+        <div class="bc-p">A company that leaves a mark long after we're gone.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOVA -->
+<section id="recova">
+  <div class="si">
+    <div class="rhd" data-r="up">
+      <div>
+        <div class="chip">Flagship Product</div>
+        <h2 class="h2">Meet <em>Recova AI</em></h2>
+      </div>
+      <div class="rlz">
+        <img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-12%20085625.png?updatedAt=1775964532274" alt="Recova AI">
+        <div class="rlz-d"></div>
+        <div class="rlz-l">by Malem</div>
+      </div>
+    </div>
+    <div class="rb">
+      <div class="rl" data-r="left">
+        <p class="ld">Recova AI modernizes debt recovery through artificial intelligence, smarter workflows, and more effective communication systems. It helps organizations recover better, operate efficiently, and improve their entire collections process.</p>
+        <p class="ld" style="margin-top:14px;max-width:100%">Recova AI is not just a product — it is the first chapter of a much bigger story. Our first step toward building intelligent systems that solve hard business problems with clarity, speed, and precision.</p>
+        <div class="rfs" style="margin-top:30px">
+          <div class="rfi"><div class="rfi-i">🤖</div><div><div class="rfi-h">AI-Powered Scoring</div><div class="rfi-b">Predict repayment likelihood with ML models that get smarter with every interaction.</div></div></div>
+          <div class="rfi"><div class="rfi-i">⚡</div><div><div class="rfi-h">Automated Workflows</div><div class="rfi-b">Intelligent automation that eliminates repetitive work and frees teams for high-value decisions.</div></div></div>
+          <div class="rfi"><div class="rfi-i">📡</div><div><div class="rfi-h">Smart Communication</div><div class="rfi-b">Multi-channel, personalized outreach that dramatically improves debtor engagement rates.</div></div></div>
+          <div class="rfi"><div class="rfi-i">🔒</div><div><div class="rfi-h">Compliance-First</div><div class="rfi-b">Built-in guardrails ensuring every interaction stays within regulatory boundaries.</div></div></div>
+        </div>
+      </div>
+      <div data-r="right">
+        <div class="rdash">
+          <div class="rdb">
+            <div class="rdd" style="background:#ff5f57"></div>
+            <div class="rdd" style="background:#fbbf24"></div>
+            <div class="rdd" style="background:#34d399"></div>
+            <div class="rdt"></div>
+          </div>
+          <div class="rdss">
+            <div class="rds"><div class="rdsv">94%</div><div class="rdsl">Recovery Rate</div></div>
+            <div class="rds"><div class="rdsv">3×</div><div class="rdsl">Faster</div></div>
+            <div class="rds"><div class="rdsv">−60%</div><div class="rdsl">Ops Cost</div></div>
+          </div>
+          <div class="rdct">Performance Metrics</div>
+          <div class="rdr"><div class="rdrl">AI Scoring</div><div class="rdtr"><div class="rdfi" style="width:92%"></div></div><div class="rdrv">92%</div></div>
+          <div class="rdr"><div class="rdrl">Automation</div><div class="rdtr"><div class="rdfi" style="width:87%;transition-delay:.15s"></div></div><div class="rdrv">87%</div></div>
+          <div class="rdr"><div class="rdrl">Engagement</div><div class="rdtr"><div class="rdfi" style="width:76%;transition-delay:.3s"></div></div><div class="rdrv">76%</div></div>
+          <div class="rdr"><div class="rdrl">Compliance</div><div class="rdtr"><div class="rdfi" style="width:99%;transition-delay:.45s"></div></div><div class="rdrv">99%</div></div>
+          <div class="rdct" style="margin-top:18px">Live Activity</div>
+          <div class="rdac">
+            <div class="rdai"><div class="rdaid" style="background:#4ade80"></div><div class="rdait">Case #4821 — payment received</div><div class="rdatime">2s ago</div></div>
+            <div class="rdai"><div class="rdaid" style="background:#6690ff"></div><div class="rdait">AI scored 247 new accounts</div><div class="rdatime">14s ago</div></div>
+            <div class="rdai"><div class="rdaid" style="background:#fbbf24"></div><div class="rdait">Campaign sent to 1,200 contacts</div><div class="rdatime">1m ago</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="si">
+    <div style="text-align:center;max-width:580px;margin:0 auto" data-r="up">
+      <div class="chip">The Road Ahead</div>
+      <h2 class="h2">Our Journey<br><em>Is Just Beginning.</em></h2>
+      <p class="ld" style="margin:18px auto 0;text-align:center">Each phase brings us closer to our ultimate goal — a globally respected technology company born and built in Manipur.</p>
+    </div>
+    <div class="jg">
+      <div class="ji act" data-r="up" style="transition-delay:.05s"><div class="ji-n">01</div><div class="ji-ph">Now · Active</div><div class="ji-h">Founding & First Product</div><div class="ji-b">Malem is founded. Recova AI development begins. The first line of code, written in Manipur.</div></div>
+      <div class="ji" data-r="up" style="transition-delay:.1s"><div class="ji-n">02</div><div class="ji-ph">Near-Term</div><div class="ji-h">Recova AI Launch</div><div class="ji-b">Recova AI goes live. Organizations begin recovering smarter with our AI-first platform.</div></div>
+      <div class="ji" data-r="up" style="transition-delay:.15s"><div class="ji-n">03</div><div class="ji-ph">Growth Phase</div><div class="ji-h">Scale & Expand</div><div class="ji-b">Grow across industries. Build a world-class team from Manipur. Expand our product portfolio.</div></div>
+      <div class="ji" data-r="up" style="transition-delay:.2s"><div class="ji-n">04</div><div class="ji-ph">The Vision</div><div class="ji-h">Global Tech Giant</div><div class="ji-b">A globally recognized technology company — built from Manipur, respected everywhere.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="si">
+    <div class="cg">
+      <div class="cl" data-r="left">
+        <div class="chip">Let's Talk</div>
+        <h2 class="h2">Build Something<br><em>Bold</em> Together.</h2>
+        <p class="ld">Whether you're a potential partner, investor, customer, or someone who simply believes in what we're building — we'd love to hear from you.</p>
+        <div class="cls">
+          <a class="cli" href="https://wa.me/918974898579" target="_blank" rel="noopener"><div class="ci-ico wa">💬</div><div><div class="ci-lbl">WhatsApp</div><div class="ci-val">+91 89748 98579</div></div><div class="ci-arr">→</div></a>
+          <a class="cli" href="mailto:malem.site@gmail.com"><div class="ci-ico em">✉️</div><div><div class="ci-lbl">Email</div><div class="ci-val">malem.site@gmail.com</div></div><div class="ci-arr">→</div></a>
+          <a class="cli" href="https://www.facebook.com/profile.php?id=61579907098126" target="_blank" rel="noopener"><div class="ci-ico fb">📘</div><div><div class="ci-lbl">Facebook</div><div class="ci-val">Malem on Facebook</div></div><div class="ci-arr">→</div></a>
+        </div>
+      </div>
+      <div data-r="right">
+        <div class="cr-map">
+          <div class="crd"></div>
+          <div class="crg"></div>
+          <div class="crpin">
+            <div class="crring"><div class="crin">📍</div></div>
+            <div class="crl">Manipur, India</div>
+            <div class="crs">Where it all begins</div>
+          </div>
+        </div>
+        <div class="cris">
+          <div class="cri"><div class="cri-l">Founded</div><div class="cri-v">2025, Manipur</div></div>
+          <div class="cri"><div class="cri-l">Status</div><div class="cri-v">Building actively</div></div>
+          <div class="cri"><div class="cri-l">Product</div><div class="cri-v">Recova AI</div></div>
+          <div class="cri"><div class="cri-l">Email</div><div class="cri-v">malem.site@gmail.com</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-17%20111235.png" alt="Malem">
+      <p>A technology company built from the soil of Manipur with a bold vision to create world-class products for the world.</p>
+    </div>
+    <div class="fc"><h5>Company</h5><a href="#about">About Malem</a><a href="#mission">Mission</a><a href="#journey">Journey</a></div>
+    <div class="fc"><h5>Products</h5><a href="#recova">Recova AI</a></div>
+    <div class="fc"><h5>Connect</h5><a href="https://wa.me/918974898579" target="_blank">WhatsApp</a><a href="mailto:malem.site@gmail.com">Email</a><a href="https://www.facebook.com/profile.php?id=61579907098126" target="_blank">Facebook</a></div>
+  </div>
+  <div class="fb2">
+    <p>© 2025 <span>Malem</span>. Built with pride in Manipur, India.</p>
+    <p style="font-size:11px;color:rgba(255,255,255,.18)">Build from Manipur · Solve for the World</p>
+  </div>
+</footer>
+
+<script>
+/* LOADER */
+const lf=document.getElementById('lf');
+let p=0;
+const li=setInterval(()=>{p=Math.min(p+Math.random()*18,94);lf.style.width=p+'%'},80);
+window.addEventListener('load',()=>{clearInterval(li);lf.style.width='100%';setTimeout(()=>document.getElementById('loader').classList.add('out'),350)});
+
+/* CURSOR */
+const c1=document.getElementById('cur'),c2=document.getElementById('cur2');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
+(function loop(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;c2.style.left=rx+'px';c2.style.top=ry+'px';requestAnimationFrame(loop)})();
+document.querySelectorAll('a,button,.rfi,.bc,.hfc').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{c1.style.width='18px';c1.style.height='18px';c2.style.width='52px';c2.style.height='52px'});
+  el.addEventListener('mouseleave',()=>{c1.style.width='8px';c1.style.height='8px';c2.style.width='32px';c2.style.height='32px'});
+});
+
+/* NAV */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>60),{passive:true});
+
+/* MOBILE */
+document.getElementById('hbg').onclick=()=>document.getElementById('mob').classList.add('open');
+function closeMob(){document.getElementById('mob').classList.remove('open')}
+
+/* TICKER */
+const words=['Built in Manipur','Recova AI','Debt Recovery Innovation','AI-Powered Collections','World-Class Technology','From India to the World','Bold Vision. Real Code.','Building Belief'];
+const tt=document.getElementById('tt');
+const html=words.map(w=>`<span class="tkr-i">${w}<span class="tkr-sep">✦</span></span>`).join('');
+tt.innerHTML=html+html;
+
+/* SCROLL REVEAL */
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');else e.target.classList.remove('vis')})},{threshold:.08,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('[data-r]').forEach(el=>ro.observe(el));
+
+/* BARS TRIGGER */
+const bo=new IntersectionObserver(entries=>{entries.forEach(e=>{e.target.querySelectorAll('.rdfi').forEach(b=>b.classList.toggle('go',e.isIntersecting))})},{threshold:.25});
+document.querySelectorAll('.rdash').forEach(el=>bo.observe(el));
+
+/* PARALLAX */
+window.addEventListener('scroll',()=>{const y=scrollY;document.querySelector('.hb1').style.transform=`translateY(${y*.07}px)`;document.querySelector('.hb2').style.transform=`translateY(${-y*.045}px)`},{passive:true});
+</script>
+</body>
+</html>
