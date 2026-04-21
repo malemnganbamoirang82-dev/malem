@@ -2,295 +2,449 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Malem — Built from Manipur. Built for the World.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- PRIMARY SEO -->
+<title>Malem | On a mission to prove that a global technology leader can emerge from Manipur and solve critical challenges for the world</title>
+<meta name="description" content="Malem Labs is a technology company from Manipur building Recova AI — the AI-powered debt recovery platform that helps you recover more, chase less, and spend less. Automated calls, WhatsApp messages, and instant payment links.">
+<meta name="keywords" content="Malem, Malem Labs, malemlabs, Recova AI, debt recovery, AI collections, Manipur tech, AI debt management, automated debt recovery, WhatsApp collections, payment recovery, Malem India">
+<meta name="author" content="Malem Labs">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://www.malemlabs.com/">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="https://ik.imagekit.io/malemnganba123/ChatGPT%20Image%20Apr%2021,%202026,%2011_32_48%20AM.png">
+<link rel="apple-touch-icon" href="https://ik.imagekit.io/malemnganba123/ChatGPT%20Image%20Apr%2021,%202026,%2011_32_48%20AM.png">
+<link rel="shortcut icon" href="https://ik.imagekit.io/malemnganba123/ChatGPT%20Image%20Apr%2021,%202026,%2011_32_48%20AM.png">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Malem Labs | Recova AI — Recover More. Chase Less. Spend Less.">
+<meta property="og:description" content="AI-powered debt recovery platform by Malem Labs, Manipur. Automated calls, WhatsApp follow-ups, and instant payment links to supercharge your collections.">
+<meta property="og:url" content="https://www.malemlabs.com/">
+<meta property="og:site_name" content="Malem Labs">
+<meta property="og:image" content="https://ik.imagekit.io/malemnganba123/ChatGPT%20Image%20Apr%2021,%202026,%2011_32_48%20AM.png">
+<meta property="og:locale" content="en_IN">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Malem Labs | Recova AI">
+<meta name="twitter:description" content="Recover More. Chase Less. Spend Less. AI-powered debt recovery from Manipur, India.">
+<meta name="twitter:image" content="https://ik.imagekit.io/malemnganba123/ChatGPT%20Image%20Apr%2021,%202026,%2011_32_48%20AM.png">
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.malemlabs.com/#organization",
+      "name": "Malem Labs",
+      "alternateName": ["Malem", "malemlabs"],
+      "url": "https://www.malemlabs.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ik.imagekit.io/malemnganba123/ChatGPT%20Image%20Apr%2021,%202026,%2011_32_48%20AM.png"
+      },
+      "description": "Technology company from Manipur, India building AI-powered products. Creator of Recova AI, an AI-powered debt recovery and collections platform.",
+      "foundingDate": "2025",
+      "foundingLocation": "Manipur, India",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8974897976",
+        "email": "malemlabs@gmail.com",
+        "contactType": "customer service"
+      },
+      "sameAs": ["https://www.facebook.com/profile.php?id=61579907098126"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.malemlabs.com/#recova-ai",
+      "name": "Recova AI",
+      "applicationCategory": "FinanceApplication",
+      "description": "AI-powered debt recovery platform with automated calls, WhatsApp messaging, and instant payment links. Recover more, chase less, spend less.",
+      "creator": {"@id": "https://www.malemlabs.com/#organization"},
+      "offers": {"@type": "Offer", "availability": "https://schema.org/ComingSoon"}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.malemlabs.com/#website",
+      "url": "https://www.malemlabs.com",
+      "name": "Malem Labs",
+      "description": "AI-powered technology company from Manipur, India",
+      "publisher": {"@id": "https://www.malemlabs.com/#organization"},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.malemlabs.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --w:#ffffff;
-  --off:#f4f5f9;
-  --ink:#05060f;
-  --ink2:#2b2d3e;
-  --muted:#8589a3;
+  --black:#000000;
+  --dark:#050510;
+  --dark2:#07071a;
+  --dark3:#0c0c28;
   --blue:#004ff9;
-  --g:linear-gradient(45deg,#004ff9,#000000);
-  --g135:linear-gradient(135deg,#004ff9 0%,#001a80 60%,#000 100%);
-  --gtext:linear-gradient(100deg,#004ff9,#0028b0,#000);
-  --border:#e4e6f0;
+  --blue2:#1a63ff;
+  --blue3:#3a7bff;
+  --glow:rgba(0,79,249,.4);
+  --cyan:#00c8ff;
+  --white:#ffffff;
+  --off:#f0f2ff;
+  --gray:#8890b0;
+  --border:rgba(255,255,255,.07);
+  --border2:rgba(0,79,249,.25);
+  --g:linear-gradient(135deg,#004ff9,#0028b0);
+  --gtext:linear-gradient(120deg,#3a7bff,#00c8ff);
+  --gfull:linear-gradient(135deg,#004ff9 0%,#00c8ff 100%);
 }
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:'Space Grotesk',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;line-height:1.6}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 
 /* CURSOR */
-#cur{position:fixed;width:8px;height:8px;background:var(--blue);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:multiply;transform:translate(-50%,-50%);transition:width .3s,height .3s}
-#cur2{position:fixed;width:32px;height:32px;border:1.5px solid rgba(0,79,249,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s}
+#cur{position:fixed;width:6px;height:6px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen;transform:translate(-50%,-50%);transition:transform .1s}
+#cur2{position:fixed;width:36px;height:36px;border:1px solid rgba(0,200,255,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
+.hovering #cur{transform:translate(-50%,-50%) scale(4);background:rgba(0,200,255,.3)}
+.hovering #cur2{width:56px;height:56px;border-color:rgba(0,200,255,.6)}
 @media(max-width:768px){#cur,#cur2{display:none}}
 
 /* LOADER */
-#loader{position:fixed;inset:0;background:var(--ink);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;transition:opacity .6s .1s,visibility .6s .1s}
+#loader{position:fixed;inset:0;background:var(--dark);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;transition:opacity .8s,visibility .8s}
 #loader.out{opacity:0;visibility:hidden}
-.ll img{height:46px;object-fit:contain;filter:brightness(10);animation:lp 1.2s ease-in-out infinite}
-.lb{width:180px;height:2px;background:rgba(255,255,255,.1);border-radius:1px;overflow:hidden}
-.lf{height:100%;width:0;background:var(--g);border-radius:1px;transition:width .05s linear}
-@keyframes lp{0%,100%{opacity:.5}50%{opacity:1}}
+.ll-logo{height:52px;object-fit:contain;animation:pulse-logo 1.5s ease-in-out infinite}
+@keyframes pulse-logo{0%,100%{opacity:.4;transform:scale(.97)}50%{opacity:1;transform:scale(1)}}
+.ll-bar{width:200px;height:1px;background:rgba(255,255,255,.06);position:relative;overflow:hidden}
+.ll-fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--gfull);transition:width .05s linear;box-shadow:0 0 12px var(--cyan)}
+.ll-pct{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.2em;color:rgba(255,255,255,.25);margin-top:6px}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 5vw;height:70px;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
-nav.sc{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--border)}
-.nl img{height:36px;object-fit:contain}
-.nls{display:flex;gap:30px;list-style:none}
-.nls a{font-size:13px;font-weight:500;color:var(--ink2);letter-spacing:.03em;transition:color .2s;position:relative}
-.nls a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--blue);transition:width .3s}
-.nls a:hover{color:var(--blue)}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 5vw;height:72px;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+nav.sc{background:rgba(5,5,16,.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nl img{height:38px;object-fit:contain}
+.nls{display:flex;gap:32px;list-style:none}
+.nls a{font-size:13px;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.04em;transition:color .2s;position:relative;padding:4px 0}
+.nls a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gfull);transition:width .3s;box-shadow:0 0 8px var(--cyan)}
+.nls a:hover{color:var(--white)}
 .nls a:hover::after{width:100%}
-.nc{background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:9px 20px;border-radius:100px;letter-spacing:.04em;transition:all .25s}
-.nc:hover{background:linear-gradient(45deg,#004ff9,#000);box-shadow:0 6px 24px rgba(0,79,249,.35)}
+.nc-btn{background:var(--g);color:#fff;font-size:13px;font-weight:600;padding:10px 22px;border-radius:100px;letter-spacing:.04em;transition:all .3s;border:1px solid transparent;position:relative;overflow:hidden}
+.nc-btn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.12),transparent);opacity:0;transition:opacity .3s}
+.nc-btn:hover{box-shadow:0 0 28px var(--glow);transform:translateY(-2px)}
+.nc-btn:hover::after{opacity:1}
 .hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;cursor:pointer}
-.hbg span{width:22px;height:2px;background:var(--ink);border-radius:2px;display:block;transition:.3s}
+.hbg span{width:22px;height:1.5px;background:rgba(255,255,255,.8);border-radius:2px;display:block;transition:.3s}
 
-/* MOBILE */
-.mob{position:fixed;inset:0;background:var(--w);z-index:600;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0 8vw;gap:8px;clip-path:circle(0% at calc(100% - 50px) 35px);transition:clip-path .55s cubic-bezier(.77,0,.175,1)}
-.mob.open{clip-path:circle(150% at calc(100% - 50px) 35px)}
-.mob a{font-family:'Fraunces',serif;font-size:clamp(2rem,7vw,3.6rem);font-weight:700;color:var(--ink);transition:color .2s;line-height:1.3}
-.mob a:hover{color:var(--blue)}
-.mob-x{position:absolute;top:20px;right:5vw;font-size:26px;cursor:pointer;color:var(--muted);background:none;border:none}
-.mob-foot{margin-top:28px;font-size:13px;color:var(--muted)}
-.mob-foot a{color:var(--blue)}
+/* MOBILE MENU */
+.mob{position:fixed;inset:0;background:var(--dark);z-index:600;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0 8vw;gap:4px;clip-path:circle(0% at calc(100% - 48px) 36px);transition:clip-path .6s cubic-bezier(.77,0,.175,1)}
+.mob.open{clip-path:circle(160% at calc(100% - 48px) 36px)}
+.mob a{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.2rem,8vw,4rem);font-weight:700;color:rgba(255,255,255,.8);transition:color .2s;line-height:1.25}
+.mob a:hover{color:var(--cyan)}
+.mob-x{position:absolute;top:22px;right:5vw;font-size:24px;cursor:pointer;color:var(--gray);background:none;border:none;line-height:1;padding:8px}
+.mob-foot{margin-top:36px;font-size:13px;color:var(--gray)}
+.mob-foot a{color:var(--cyan)}
 
 /* HERO */
-#hero{min-height:100svh;display:flex;align-items:center;padding:100px 5vw 80px;position:relative;overflow:hidden}
-.hb{position:absolute;pointer-events:none;border-radius:50%;filter:blur(90px)}
-.hb1{width:65vw;height:65vw;max-width:780px;max-height:780px;background:radial-gradient(circle at 30%,rgba(0,79,249,.11),transparent 70%);top:-25%;right:-15%;animation:bm 14s ease-in-out infinite}
-.hb2{width:45vw;height:45vw;max-width:560px;max-height:560px;background:radial-gradient(circle,rgba(0,10,80,.08),transparent 70%);bottom:-20%;left:-8%;animation:bm 18s ease-in-out infinite reverse}
-@keyframes bm{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(3%,-4%) scale(1.06)}66%{transform:translate(-3%,3%) scale(.95)}}
-.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,79,249,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,79,249,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 70% 50%,black 20%,transparent 75%);pointer-events:none}
-.hi{position:relative;z-index:2;max-width:1200px;width:100%;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
-.htag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,79,249,.07);border:1px solid rgba(0,79,249,.18);padding:6px 14px;border-radius:100px;margin-bottom:30px;opacity:0;animation:au .7s .3s forwards}
-.htag-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);animation:bl 2s infinite}
-@keyframes bl{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,79,249,.4)}50%{opacity:.3;box-shadow:0 0 0 5px transparent}}
-.htag span{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
-h1{font-family:'Fraunces',serif;font-size:clamp(3rem,5.5vw,5.8rem);line-height:1.02;font-weight:700;margin-bottom:26px;opacity:0;animation:au .8s .45s forwards}
-h1 em{font-style:italic;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hp{font-size:clamp(.95rem,1.4vw,1.12rem);color:var(--ink2);line-height:1.82;max-width:490px;font-weight:300;opacity:0;animation:au .8s .6s forwards}
-.hbtns{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap;opacity:0;animation:au .8s .75s forwards}
-.bg{display:inline-flex;align-items:center;gap:8px;background:var(--g);color:#fff;font-weight:600;font-size:14px;padding:13px 26px;border-radius:100px;letter-spacing:.04em;box-shadow:0 8px 32px rgba(0,79,249,.28);transition:all .3s}
-.bg:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,79,249,.4)}
-.bg svg{transition:transform .3s}
-.bg:hover svg{transform:translateX(4px)}
-.bo{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink);font-weight:600;font-size:14px;padding:13px 26px;border-radius:100px;border:1.5px solid var(--border);letter-spacing:.04em;transition:all .3s}
-.bo:hover{border-color:var(--blue);color:var(--blue);background:rgba(0,79,249,.04)}
-.hr{opacity:0;animation:fi .9s 1s forwards}
-.hcm{background:var(--g135);border-radius:26px;padding:32px;color:#fff;position:relative;overflow:hidden}
-.hcm::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
-.hcm-lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:8px}
-.hcm-logo{height:44px;object-fit:contain;margin-bottom:18px;filter:brightness(10)}
-.hcm-p{font-size:14px;opacity:.75;line-height:1.7;font-weight:300}
-.hcm-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:6px 14px;font-size:12px;margin-top:18px;font-weight:500}
-.hcm-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:#4ade80;animation:bl 2s infinite}
-.hfcs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-.hfc{background:var(--w);border:1px solid var(--border);border-radius:18px;padding:16px 18px;transition:box-shadow .3s,transform .3s}
-.hfc:hover{box-shadow:0 8px 28px rgba(0,79,249,.1);transform:translateY(-3px)}
-.hfc-i{font-size:20px;margin-bottom:8px}
-.hfc-n{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hfc-l{font-size:11px;color:var(--muted)}
-.hscroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:au .7s 1.5s forwards}
-.hs-t{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.hs-l{width:1px;height:42px;background:linear-gradient(to bottom,var(--blue),transparent);animation:lb2 2s ease-in-out infinite}
-@keyframes lb2{0%,100%{transform:scaleY(1);opacity:.7}50%{transform:scaleY(.4);opacity:.25}}
-@keyframes au{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
-@keyframes fi{from{opacity:0}to{opacity:1}}
+#hero{min-height:100svh;display:flex;align-items:center;padding:100px 5vw 80px;position:relative;overflow:hidden;background:var(--dark)}
+#hero-canvas{position:absolute;inset:0;z-index:0}
+.h-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,79,249,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,79,249,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at 60% 50%,black 0%,transparent 72%);pointer-events:none;z-index:1}
+.h-orb1{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle at center,rgba(0,79,249,.18) 0%,transparent 70%);top:-200px;right:-200px;pointer-events:none;z-index:1;animation:orb-float 16s ease-in-out infinite}
+.h-orb2{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle at center,rgba(0,200,255,.08) 0%,transparent 70%);bottom:-150px;left:-100px;pointer-events:none;z-index:1;animation:orb-float 20s ease-in-out infinite reverse}
+@keyframes orb-float{0%,100%{transform:translate(0,0)}33%{transform:translate(4%,-5%)}66%{transform:translate(-3%,4%)}}
+.hi{position:relative;z-index:2;max-width:1240px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+
+/* HERO TEXT */
+.hl{max-width:600px}
+.h-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,79,249,.1);border:1px solid rgba(0,200,255,.2);padding:7px 16px;border-radius:100px;margin-bottom:32px;opacity:0;animation:slide-up .7s .3s forwards}
+.h-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);animation:blink 2s infinite;box-shadow:0 0 8px var(--cyan)}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,255,.5)}50%{opacity:.3;box-shadow:0 0 0 6px transparent}}
+.h-tag span{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.8rem,5.2vw,5.6rem);line-height:1.02;font-weight:800;margin-bottom:24px;opacity:0;animation:slide-up .8s .45s forwards;letter-spacing:-.02em}
+h1 .gradient-text{background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.h-sub{font-size:clamp(.95rem,1.3vw,1.1rem);color:rgba(255,255,255,.55);line-height:1.8;max-width:480px;font-weight:300;opacity:0;animation:slide-up .8s .6s forwards}
+.h-btns{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap;opacity:0;animation:slide-up .8s .75s forwards}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--g);color:#fff;font-weight:600;font-size:14px;padding:14px 28px;border-radius:100px;letter-spacing:.04em;box-shadow:0 8px 36px rgba(0,79,249,.35);transition:all .3s;position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);opacity:0;transition:opacity .3s}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 52px rgba(0,79,249,.5)}
+.btn-primary:hover::before{opacity:1}
+.btn-primary svg{transition:transform .3s}
+.btn-primary:hover svg{transform:translateX(5px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.8);font-weight:500;font-size:14px;padding:14px 28px;border-radius:100px;border:1px solid rgba(255,255,255,.12);letter-spacing:.04em;transition:all .3s;backdrop-filter:blur(8px)}
+.btn-ghost:hover{border-color:rgba(0,200,255,.4);color:var(--cyan);background:rgba(0,200,255,.06)}
+
+/* HERO CARD */
+.hr{opacity:0;animation:fade-in .9s 1s forwards}
+.recova-card{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:32px;backdrop-filter:blur(20px);position:relative;overflow:hidden;margin-bottom:16px}
+.recova-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,79,249,.15),rgba(0,200,255,.05));pointer-events:none}
+.recova-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,200,255,.5),transparent)}
+.rc-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px}
+.rc-logo{height:48px;object-fit:contain;margin-bottom:18px}
+.rc-tagline{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:12px}
+.rc-sub{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;font-weight:300}
+.rc-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.25);border-radius:100px;padding:7px 14px;font-size:11px;font-weight:600;color:#4ade80;margin-top:16px;letter-spacing:.04em}
+.rc-pill::before{content:'';width:6px;height:6px;border-radius:50%;background:#4ade80;animation:blink-g 2s infinite}
+@keyframes blink-g{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(74,222,128,.4)}50%{opacity:.3;box-shadow:0 0 0 4px transparent}}
+.h-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.h-stat{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center;transition:all .3s;backdrop-filter:blur(8px)}
+.h-stat:hover{background:rgba(0,79,249,.12);border-color:var(--border2);transform:translateY(-3px)}
+.hs-n{font-family:'Bebas Neue',sans-serif;font-size:2rem;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:4px}
+.hs-l{font-size:10px;color:var(--gray);letter-spacing:.06em}
+
+/* SCROLL HINT */
+.h-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:slide-up .7s 1.6s forwards}
+.hs-txt{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.hs-line{width:1px;height:44px;background:linear-gradient(to bottom,var(--blue3),transparent);animation:scroll-pulse 2s ease-in-out infinite}
+@keyframes scroll-pulse{0%,100%{transform:scaleY(1);opacity:.6}50%{transform:scaleY(.4);opacity:.2}}
+
+/* ANIMATIONS */
+@keyframes slide-up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
 
 /* TICKER */
-.tkr{background:var(--ink);overflow:hidden;padding:13px 0;white-space:nowrap}
-.tkr-t{display:inline-flex;animation:tk 32s linear infinite}
-.tkr-i{display:inline-flex;align-items:center;gap:12px;padding:0 28px;font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;font-weight:500}
-.tkr-sep{color:var(--blue);font-size:14px}
-@keyframes tk{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker{background:var(--dark2);overflow:hidden;padding:14px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative}
+.ticker::before,.ticker::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(to right,var(--dark2),transparent)}
+.ticker::after{right:0;background:linear-gradient(to left,var(--dark2),transparent)}
+.tkr-wrap{display:flex;white-space:nowrap}
+.tkr-inner{display:inline-flex;animation:ticker-scroll 28s linear infinite}
+.tkr-item{display:inline-flex;align-items:center;gap:12px;padding:0 24px;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.tkr-sep{color:var(--blue3);font-size:12px}
+@keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* SHARED */
-.s{padding:clamp(80px,10vw,130px) 5vw}
-.si{max-width:1200px;margin:0 auto}
-.chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
-.chip::before{content:'';width:18px;height:2px;background:var(--g)}
-.h2{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:1.1;color:var(--ink)}
-.h2 em{font-style:italic;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.ld{font-size:clamp(.92rem,1.3vw,1.08rem);color:var(--ink2);line-height:1.85;font-weight:300;max-width:550px}
+/* SHARED SECTION */
+.section{padding:clamp(80px,10vw,140px) 5vw}
+.sinner{max-width:1200px;margin:0 auto}
+.section-dark{background:var(--dark)}
+.section-darker{background:var(--dark2)}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue3);margin-bottom:18px}
+.chip::before{content:'';width:20px;height:1.5px;background:var(--gfull);box-shadow:0 0 8px var(--cyan)}
+.s-h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2rem,4vw,3.8rem);font-weight:800;line-height:1.07;color:var(--white);letter-spacing:-.02em}
+.s-h2 em,.s-h2 .g{font-style:normal;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.s-h2 em{font-style:italic}
+.s-p{font-size:clamp(.92rem,1.3vw,1.05rem);color:rgba(255,255,255,.5);line-height:1.88;font-weight:300}
 
 /* ABOUT */
-#about{background:var(--w)}
-.ag{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,96px);align-items:center}
-.av{position:relative}
-.av-img{width:100%;height:clamp(300px,40vw,520px);object-fit:cover;border-radius:22px}
-.av-badge{position:absolute;top:-16px;right:-16px;background:var(--g);color:#fff;border-radius:16px;padding:14px 18px;text-align:center;box-shadow:0 8px 28px rgba(0,79,249,.35);animation:flt 5s ease-in-out infinite}
-@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.av-badge-n{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:700;display:block;line-height:1}
-.av-badge-l{font-size:10px;opacity:.7;letter-spacing:.06em}
-.av-pill{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);background:var(--w);border:1px solid var(--border);border-radius:100px;padding:11px 22px;display:flex;align-items:center;gap:12px;white-space:nowrap;box-shadow:0 14px 44px rgba(0,0,0,.1)}
-.av-pill-g{width:9px;height:9px;border-radius:50%;background:#4ade80;animation:bl 2s infinite}
-.av-pill-t{font-size:13px;font-weight:600}
-.at .ld{margin:18px 0 28px}
-.acols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
-.acol{background:var(--off);border-radius:14px;padding:20px;border:1px solid var(--border)}
-.acol-t{font-weight:700;font-size:14px;margin-bottom:5px;display:flex;align-items:center;gap:8px}
-.acol-b{font-size:13px;color:var(--muted);line-height:1.6}
+#about{background:var(--dark)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,100px);align-items:center}
+.about-img-wrap{position:relative}
+.about-img-frame{position:relative;border-radius:24px;overflow:hidden}
+.about-img-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,79,249,.4) 100%);z-index:1}
+.about-img-frame::after{content:'';position:absolute;inset:-1px;border-radius:25px;border:1px solid rgba(0,200,255,.2);pointer-events:none;z-index:2}
+.about-img{width:100%;height:clamp(380px,45vw,560px);object-fit:cover;object-position:center top;border-radius:24px;display:block;filter:brightness(.9) contrast(1.05)}
+.ai-badge{position:absolute;top:-18px;right:-18px;background:linear-gradient(135deg,#004ff9,#00c8ff);color:#fff;border-radius:18px;padding:16px 20px;text-align:center;box-shadow:0 12px 36px rgba(0,79,249,.45);z-index:3;animation:float-badge 5s ease-in-out infinite}
+@keyframes float-badge{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.ai-badge-n{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;display:block;line-height:1;letter-spacing:.05em}
+.ai-badge-l{font-size:9px;opacity:.7;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+.ai-pill{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);background:rgba(7,7,26,.9);border:1px solid rgba(0,200,255,.25);border-radius:100px;padding:12px 24px;display:flex;align-items:center;gap:12px;white-space:nowrap;backdrop-filter:blur(16px);z-index:3;box-shadow:0 16px 48px rgba(0,0,0,.4)}
+.aip-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80;animation:blink-g 2s infinite}
+.aip-t{font-size:13px;font-weight:600;color:var(--white)}
+.about-txt .s-p{margin:20px 0 32px}
+.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.acol{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:20px;transition:all .35s}
+.acol:hover{background:rgba(0,79,249,.1);border-color:var(--border2);transform:translateY(-4px)}
+.acol-icon{font-size:1.5rem;margin-bottom:10px}
+.acol-t{font-weight:700;font-size:14px;margin-bottom:6px;color:var(--white)}
+.acol-b{font-size:12px;color:var(--gray);line-height:1.65}
 
 /* MANIFESTO */
-#man{background:var(--off);padding:clamp(80px,10vw,130px) 5vw;text-align:center}
-.man-t{font-family:'Fraunces',serif;font-size:clamp(1.8rem,4vw,3.4rem);font-weight:700;line-height:1.25;max-width:880px;margin:0 auto}
-.man-t .gt{background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.man-t .it{font-style:italic}
-.man-s{font-size:clamp(.95rem,1.3vw,1.05rem);color:var(--muted);max-width:520px;margin:28px auto 0;line-height:1.8;font-weight:300}
+#man{background:var(--dark2);text-align:center;padding:clamp(70px,9vw,120px) 5vw;position:relative;overflow:hidden}
+#man::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(0,79,249,.12),transparent 70%);pointer-events:none}
+.man-line{width:1px;height:60px;background:linear-gradient(to bottom,transparent,var(--blue3));margin:0 auto 36px;animation:man-line 3s ease-in-out infinite}
+@keyframes man-line{0%,100%{opacity:.4;height:50px}50%{opacity:1;height:70px}}
+.man-q{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.6rem,3.5vw,3rem);font-weight:700;line-height:1.3;max-width:840px;margin:0 auto;color:rgba(255,255,255,.88);letter-spacing:-.01em}
+.man-q .hl{background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.man-q .it{font-style:italic;color:var(--cyan)}
+.man-sub{font-size:clamp(.9rem,1.2vw,1rem);color:rgba(255,255,255,.35);max-width:500px;margin:28px auto 0;line-height:1.85;font-weight:300}
+.man-line2{width:60px;height:1px;background:linear-gradient(to right,transparent,var(--blue3),transparent);margin:36px auto 0}
 
-/* MISSION BENTO */
-#mission{background:var(--ink);padding:clamp(80px,10vw,130px) 5vw}
-#mission .chip{color:#6690ff}
-#mission .chip::before{background:linear-gradient(90deg,#6690ff,#004ff9)}
-#mission .h2{color:#fff}
-.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:48px}
-.bc{border-radius:22px;padding:30px;border:1px solid rgba(255,255,255,.07);transition:border-color .3s,transform .3s;position:relative;overflow:hidden}
-.bc:hover{border-color:rgba(0,79,249,.4);transform:translateY(-4px)}
-.bc1{grid-column:span 5;background:rgba(255,255,255,.03)}
-.bc2{grid-column:span 7;background:var(--g135)}
-.bc2::after{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.07),transparent);border-radius:50%}
-.bc3{grid-column:span 4;background:rgba(0,79,249,.11);border-color:rgba(0,79,249,.2)}
-.bc4{grid-column:span 4;background:rgba(255,255,255,.03)}
-.bc5{grid-column:span 4;background:rgba(255,255,255,.03)}
-.bc-i{font-size:2rem;margin-bottom:18px}
-.bc-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:9px;font-weight:600}
-.bc-h{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:10px}
-.bc-h.lg{font-size:clamp(1.5rem,2.3vw,1.9rem)}
-.bc-p{font-size:14px;color:rgba(255,255,255,.52);line-height:1.75;font-weight:300}
-.bc-n{font-family:'Fraunces',serif;font-size:4rem;font-weight:700;background:linear-gradient(135deg,#6690ff,#004ff9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:10px}
+/* MISSION */
+#mission{background:var(--dark3)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:52px}
+.bc{border-radius:22px;padding:30px;border:1px solid var(--border);transition:border-color .35s,transform .35s;position:relative;overflow:hidden;cursor:default}
+.bc::after{content:'';position:absolute;inset:0;opacity:0;transition:opacity .35s;pointer-events:none}
+.bc:hover{transform:translateY(-5px)}
+.bc1{grid-column:span 5;background:rgba(255,255,255,.025)}
+.bc1::after{background:radial-gradient(ellipse at top left,rgba(0,79,249,.15),transparent)}
+.bc1:hover{border-color:var(--border2)}
+.bc1:hover::after{opacity:1}
+.bc2{grid-column:span 7;background:linear-gradient(135deg,rgba(0,79,249,.3),rgba(0,200,255,.12))}
+.bc2::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.05),transparent);border-radius:50%;transform:translate(30%,-30%)}
+.bc2::after{background:linear-gradient(135deg,rgba(255,255,255,.04),transparent)}
+.bc2:hover{border-color:rgba(0,200,255,.35)}
+.bc2:hover::after{opacity:1}
+.bc3,.bc4,.bc5{grid-column:span 4;background:rgba(255,255,255,.025)}
+.bc3:hover,.bc4:hover,.bc5:hover{border-color:var(--border2)}
+.bc-ico{font-size:2rem;margin-bottom:16px}
+.bc-tag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px;font-weight:600}
+.bc-h{font-family:'Bricolage Grotesque',sans-serif;font-size:1.18rem;font-weight:700;color:var(--white);margin-bottom:10px;letter-spacing:-.01em}
+.bc-h.lg{font-size:clamp(1.35rem,2vw,1.75rem)}
+.bc-p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;font-weight:300}
+.bc-n{font-family:'Bebas Neue',sans-serif;font-size:4.5rem;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:10px}
 
-/* RECOVA */
-#recova{background:var(--w);padding:clamp(80px,10vw,130px) 5vw}
-.rhd{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:58px}
-.rlz{display:flex;align-items:center;gap:14px}
-.rlz img{height:52px;object-fit:contain}
-.rlz-d{width:1px;height:36px;background:var(--border)}
-.rlz-l{font-size:12px;color:var(--muted)}
-.rb{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:start}
-.rl .ld{margin:18px 0 32px}
-.rfs{display:flex;flex-direction:column;gap:11px}
-.rfi{display:flex;gap:14px;align-items:flex-start;background:var(--off);border:1px solid var(--border);border-radius:16px;padding:18px 20px;transition:all .3s;cursor:default}
-.rfi:hover{background:#fff;border-color:rgba(0,79,249,.25);box-shadow:0 8px 28px rgba(0,79,249,.1);transform:translateX(5px)}
-.rfi-i{width:38px;height:38px;border-radius:11px;background:var(--g);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-.rfi-h{font-weight:700;font-size:13px;margin-bottom:3px}
-.rfi-b{font-size:12px;color:var(--muted);line-height:1.6}
-.rdash{background:var(--ink);border-radius:26px;padding:26px;position:sticky;top:90px}
-.rdb{display:flex;align-items:center;gap:7px;margin-bottom:24px}
-.rdd{width:9px;height:9px;border-radius:50%}
-.rdt{flex:1;height:7px;background:rgba(255,255,255,.05);border-radius:4px;margin-left:8px}
-.rdss{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:22px}
-.rds{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:13px;padding:13px;text-align:center;transition:background .3s}
-.rds:hover{background:rgba(0,79,249,.14)}
-.rdsv{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:700;background:linear-gradient(135deg,#6690ff,#3370ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.rdsl{font-size:10px;color:rgba(255,255,255,.38);margin-top:3px}
-.rdct{font-size:10px;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.1em;margin-bottom:13px}
-.rdr{display:flex;align-items:center;gap:10px;margin-bottom:9px}
-.rdrl{font-size:11px;color:rgba(255,255,255,.42);width:72px;text-align:right;flex-shrink:0}
-.rdtr{flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
-.rdfi{height:100%;border-radius:3px;background:linear-gradient(90deg,#6690ff,#004ff9);transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
-.rdfi.go{transform:scaleX(1)}
-.rdrv{font-size:11px;color:rgba(255,255,255,.5);width:30px;font-weight:600}
-.rdac{display:flex;flex-direction:column;gap:7px;margin-top:18px}
-.rdai{display:flex;align-items:center;gap:9px;padding:9px 13px;background:rgba(255,255,255,.03);border-radius:9px;border:1px solid rgba(255,255,255,.05)}
-.rdaid{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.rdait{font-size:12px;color:rgba(255,255,255,.58)}
-.rdatime{font-size:10px;color:rgba(255,255,255,.28);margin-left:auto}
+/* RECOVA AI */
+#recova{background:var(--dark)}
+.recova-header{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:64px}
+.recova-logo-wrap{display:flex;align-items:center;gap:16px}
+.recova-logo-wrap img{height:54px;object-fit:contain}
+.rlw-div{width:1px;height:38px;background:var(--border)}
+.rlw-txt{font-size:12px;color:var(--gray);line-height:1.4}
+.recova-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,80px);align-items:start}
+.recova-features{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+.rf-item{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:18px;padding:20px 22px;transition:all .35s;cursor:default;position:relative;overflow:hidden}
+.rf-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--g);transform:scaleY(0);transition:transform .35s;transform-origin:bottom}
+.rf-item:hover{background:rgba(0,79,249,.08);border-color:var(--border2);transform:translateX(6px)}
+.rf-item:hover::before{transform:scaleY(1)}
+.rf-icon{width:42px;height:42px;border-radius:12px;background:var(--g);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 6px 20px rgba(0,79,249,.3)}
+.rf-h{font-weight:700;font-size:14px;margin-bottom:4px;color:var(--white)}
+.rf-b{font-size:12px;color:var(--gray);line-height:1.65}
+
+/* RECOVA DASHBOARD */
+.rdash{background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--border);border-radius:26px;padding:28px;position:sticky;top:90px;backdrop-filter:blur(20px)}
+.rdash::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,200,255,.4),transparent);border-radius:26px 26px 0 0}
+.rdb{display:flex;align-items:center;gap:8px;margin-bottom:26px}
+.rdd{width:10px;height:10px;border-radius:50%}
+.rdb-txt{flex:1;text-align:right;font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.2);text-transform:uppercase}
+.rd-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:26px}
+.rd-stat{background:rgba(0,79,249,.1);border:1px solid rgba(0,79,249,.2);border-radius:14px;padding:14px;text-align:center;transition:all .3s}
+.rd-stat:hover{background:rgba(0,79,249,.18);transform:translateY(-3px)}
+.rdv{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:4px}
+.rdl{font-size:9px;color:rgba(255,255,255,.3);letter-spacing:.08em}
+.rd-bars-lbl{font-size:9px;color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
+.rd-bar{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.rd-bar-l{font-size:10px;color:rgba(255,255,255,.35);width:76px;text-align:right;flex-shrink:0}
+.rd-bar-track{flex:1;height:6px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden}
+.rd-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--blue3),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+.rd-bar-fill.go{transform:scaleX(1)}
+.rd-bar-v{font-size:10px;color:rgba(255,255,255,.5);width:32px;font-weight:600}
+.rd-activity{margin-top:20px}
+.rd-act-lbl{font-size:9px;color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px}
+.rd-act-item{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(255,255,255,.025);border-radius:10px;border:1px solid var(--border);margin-bottom:8px;animation:activity-pulse 4s ease-in-out infinite}
+.rd-act-item:nth-child(2){animation-delay:.8s}
+.rd-act-item:nth-child(3){animation-delay:1.6s}
+@keyframes activity-pulse{0%,100%{border-color:var(--border)}50%{border-color:rgba(0,200,255,.15)}}
+.rd-act-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.rd-act-txt{font-size:11px;color:rgba(255,255,255,.5);flex:1}
+.rd-act-time{font-size:9px;color:rgba(255,255,255,.22)}
+
+/* HOW IT WORKS */
+#how{background:var(--dark2)}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;position:relative}
+.how-steps::before{content:'';position:absolute;top:36px;left:18%;right:18%;height:1px;background:linear-gradient(90deg,transparent,var(--blue3) 20%,var(--blue3) 80%,transparent);z-index:0}
+.how-step{text-align:center;padding:20px;position:relative;z-index:1}
+.how-num{width:72px;height:72px;border-radius:50%;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;transition:all .4s;position:relative;background:var(--dark2)}
+.how-num::after{content:'';position:absolute;inset:-3px;border-radius:50%;border:1px solid transparent;background:linear-gradient(var(--dark2),var(--dark2)) padding-box,var(--gfull) border-box;opacity:0;transition:opacity .4s}
+.how-step:hover .how-num{transform:scale(1.1)}
+.how-step:hover .how-num::after{opacity:1}
+.how-num-i{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.how-icon{font-size:1.8rem;margin-bottom:16px}
+.how-h{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:10px}
+.how-p{font-size:13px;color:var(--gray);line-height:1.7}
 
 /* JOURNEY */
-#journey{background:var(--w);padding:clamp(80px,10vw,130px) 5vw}
-.jg{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;position:relative}
-.jg::before{content:'';position:absolute;top:27px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,var(--blue) 20%,var(--blue) 80%,transparent)}
-.ji{padding:20px 18px;text-align:center}
-.ji-n{width:54px;height:54px;border-radius:50%;background:var(--w);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--muted);transition:all .4s;position:relative;z-index:2}
-.ji.act .ji-n,.ji:hover .ji-n{background:var(--g);border-color:var(--blue);color:#fff;box-shadow:0 6px 24px rgba(0,79,249,.3)}
-.ji-ph{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:7px}
-.ji-h{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;margin-bottom:9px}
-.ji-b{font-size:13px;color:var(--muted);line-height:1.65}
+#journey{background:var(--dark3)}
+.journey-header{text-align:center;max-width:560px;margin:0 auto 60px}
+.journey-header .s-p{margin-top:16px}
+.j-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.j-line{position:absolute;top:28px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--blue3) 15%,var(--blue3) 85%,transparent)}
+.j-item{padding:24px 20px;text-align:center;position:relative;z-index:1}
+.j-num{width:56px;height:56px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--gray);transition:all .4s;background:var(--dark3)}
+.j-item.active .j-num,.j-item:hover .j-num{background:var(--g);border-color:var(--blue);color:#fff;box-shadow:0 6px 28px rgba(0,79,249,.4)}
+.j-phase{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue3);font-weight:700;margin-bottom:8px}
+.j-h{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:10px}
+.j-b{font-size:12px;color:var(--gray);line-height:1.7}
 
 /* CONTACT */
-#contact{background:var(--ink);padding:clamp(80px,10vw,130px) 5vw}
-#contact .chip{color:#6690ff}
-#contact .chip::before{background:linear-gradient(90deg,#6690ff,#004ff9)}
-#contact .h2{color:#fff}
-.cg{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(40px,6vw,90px);margin-top:48px;align-items:start}
-.cl .ld{color:rgba(255,255,255,.52);margin:18px 0 36px}
-.cls{display:flex;flex-direction:column;gap:11px}
-.cli{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 22px;transition:all .3s;color:rgba(255,255,255,.8)}
-.cli:hover{background:rgba(0,79,249,.14);border-color:rgba(0,79,249,.38);transform:translateX(7px)}
-.ci-ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
-.ci-ico.wa{background:#025c4c}
-.ci-ico.em{background:rgba(0,79,249,.28)}
-.ci-ico.fb{background:#1877f2}
-.ci-lbl{font-size:10px;color:rgba(255,255,255,.33);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
-.ci-val{font-size:14px;font-weight:500}
-.ci-arr{margin-left:auto;color:rgba(255,255,255,.28);transition:all .3s}
-.cli:hover .ci-arr{transform:translateX(4px);color:rgba(255,255,255,.6)}
-.cr-map{background:linear-gradient(135deg,#04051a,#071440);border:1px solid rgba(0,79,249,.2);border-radius:22px;height:300px;position:relative;overflow:hidden;margin-bottom:14px}
-.crd{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,79,249,.32) 1px,transparent 1px);background-size:25px 25px;animation:dd 18s linear infinite}
-@keyframes dd{0%{background-position:0 0}100%{background-position:25px 25px}}
-.crg{position:absolute;width:280px;height:280px;background:radial-gradient(circle,rgba(0,79,249,.18),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
-.crpin{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2}
-.crring{width:68px;height:68px;border-radius:50%;background:rgba(0,79,249,.14);border:1.5px solid rgba(0,79,249,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 11px;animation:pr 3s ease-in-out infinite}
-@keyframes pr{0%,100%{box-shadow:0 0 0 0 rgba(0,79,249,.4)}50%{box-shadow:0 0 0 20px rgba(0,79,249,0)}}
-.crin{width:38px;height:38px;background:var(--g);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px}
-.crl{color:#fff;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700}
-.crs{color:rgba(255,255,255,.46);font-size:12px}
-.cris{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.cri{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px 16px}
-.cri-l{font-size:10px;color:rgba(255,255,255,.32);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
-.cri-v{font-size:13px;color:rgba(255,255,255,.7);font-weight:500}
+#contact{background:var(--dark)}
+.cg{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(40px,6vw,96px);margin-top:52px;align-items:start}
+.c-links{display:flex;flex-direction:column;gap:12px;margin-top:36px}
+.c-link{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:18px;padding:18px 22px;transition:all .35s;color:rgba(255,255,255,.7);position:relative;overflow:hidden}
+.c-link::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gfull);transform:scaleY(0);transition:transform .35s;transform-origin:bottom}
+.c-link:hover{background:rgba(0,79,249,.1);border-color:var(--border2);transform:translateX(8px)}
+.c-link:hover::before{transform:scaleY(1)}
+.c-ico{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.c-ico.wa{background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.2)}
+.c-ico.em{background:rgba(0,79,249,.15);border:1px solid rgba(0,79,249,.25)}
+.c-ico.fb{background:rgba(24,119,242,.15);border:1px solid rgba(24,119,242,.25)}
+.c-ico.web{background:rgba(0,200,255,.1);border:1px solid rgba(0,200,255,.2)}
+.c-lbl{font-size:10px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}
+.c-val{font-size:14px;font-weight:600;color:var(--white)}
+.c-arr{margin-left:auto;color:rgba(255,255,255,.25);transition:all .35s;font-size:18px}
+.c-link:hover .c-arr{transform:translateX(4px);color:var(--cyan)}
+.c-map{background:linear-gradient(135deg,rgba(0,79,249,.15),rgba(0,12,60,.8));border:1px solid rgba(0,79,249,.2);border-radius:24px;height:280px;position:relative;overflow:hidden;margin-bottom:16px}
+.map-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,79,249,.35) 1px,transparent 1px);background-size:22px 22px;animation:dots-move 20s linear infinite}
+@keyframes dots-move{0%{background-position:0 0}100%{background-position:22px 22px}}
+.map-glow{position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(0,79,249,.2),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
+.map-pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2}
+.map-ring{width:72px;height:72px;border-radius:50%;background:rgba(0,79,249,.15);border:1.5px solid rgba(0,200,255,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;animation:map-pulse 3s ease-in-out infinite}
+@keyframes map-pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,79,249,.4)}50%{box-shadow:0 0 0 22px rgba(0,79,249,0)}}
+.map-pin-i{width:40px;height:40px;background:var(--g);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px}
+.map-city{color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700}
+.map-sub{color:rgba(255,255,255,.4);font-size:12px;margin-top:3px}
+.c-info{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ci{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:14px;padding:16px}
+.ci-l{font-size:9px;color:rgba(255,255,255,.3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.ci-v{font-size:13px;color:rgba(255,255,255,.7);font-weight:500}
 
 /* FOOTER */
-footer{background:#02030a;padding:44px 5vw 30px;border-top:1px solid rgba(255,255,255,.05)}
-.ft{display:flex;justify-content:space-between;align-items:flex-start;gap:36px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.06)}
-.fb img{height:32px;margin-bottom:12px;object-fit:contain}
-.fb p{font-size:13px;color:rgba(255,255,255,.33);max-width:250px;line-height:1.7;font-weight:300}
-.fc h5{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:16px;font-weight:600}
-.fc a{display:block;font-size:13px;color:rgba(255,255,255,.52);margin-bottom:10px;transition:color .2s}
-.fc a:hover{color:#6690ff}
-.fb2{display:flex;justify-content:space-between;align-items:center;padding-top:26px;flex-wrap:wrap;gap:12px}
-.fb2 p{font-size:12px;color:rgba(255,255,255,.24)}
-.fb2 span{background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700}
+footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--border)}
+.ft{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid var(--border)}
+.fb img{height:34px;margin-bottom:14px;object-fit:contain}
+.fb p{font-size:13px;color:rgba(255,255,255,.28);max-width:240px;line-height:1.75;font-weight:300}
+.fc h5{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:18px;font-weight:600}
+.fc a{display:block;font-size:13px;color:rgba(255,255,255,.45);margin-bottom:11px;transition:color .2s}
+.fc a:hover{color:var(--cyan)}
+.fb2{display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:12px}
+.fb2 p{font-size:12px;color:rgba(255,255,255,.2)}
+.fb2 span{background:var(--gtext);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700}
 
-/* REVEAL */
-[data-r]{opacity:0;transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
-[data-r="up"]{transform:translateY(44px)}
-[data-r="left"]{transform:translateX(-44px)}
-[data-r="right"]{transform:translateX(44px)}
-[data-r="scale"]{transform:scale(.93)}
+/* SCROLL REVEAL */
+[data-r]{opacity:0;transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+[data-r="up"]{transform:translateY(48px)}
+[data-r="left"]{transform:translateX(-48px)}
+[data-r="right"]{transform:translateX(48px)}
+[data-r="scale"]{transform:scale(.92)}
 [data-r].vis{opacity:1;transform:none}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
-  .hi,.ag,.rb,.cg{grid-template-columns:1fr}
+  .hi,.about-grid,.recova-grid,.cg{grid-template-columns:1fr}
   .hr{display:none}
   .rdash{position:static}
   .bento .bc1,.bento .bc2{grid-column:span 12}
   .bento .bc3,.bento .bc4,.bento .bc5{grid-column:span 4}
+  .how-steps{grid-template-columns:1fr}
+  .how-steps::before{display:none}
 }
 @media(max-width:768px){
-  .nls,.nc{display:none}
+  .nls,.nc-btn{display:none}
   .hbg{display:flex}
-  .jg{grid-template-columns:1fr 1fr}
-  .jg::before{display:none}
+  .j-grid{grid-template-columns:1fr 1fr}
+  .j-line{display:none}
   .ft{flex-direction:column}
-  .acols{grid-template-columns:1fr}
+  .about-cols{grid-template-columns:1fr}
   .bento .bc3,.bento .bc4,.bento .bc5{grid-column:span 12}
-  .rdss{grid-template-columns:1fr 1fr}
-  .cris{grid-template-columns:1fr}
+  .h-stats{grid-template-columns:repeat(3,1fr)}
+  .c-info{grid-template-columns:1fr}
 }
 @media(max-width:480px){
-  .jg{grid-template-columns:1fr}
-  .hbtns{flex-direction:column}
-  .hbtns a{justify-content:center;text-align:center}
-  .hfcs{grid-template-columns:1fr 1fr}
+  .j-grid{grid-template-columns:1fr}
+  .h-btns{flex-direction:column}
+  .h-btns a{justify-content:center}
+  .h-stats{grid-template-columns:1fr 1fr}
+  .rd-stats{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -298,97 +452,107 @@ footer{background:#02030a;padding:44px 5vw 30px;border-top:1px solid rgba(255,25
 
 <!-- LOADER -->
 <div id="loader">
-  <div class="ll"><img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-17%20111235.png" alt="Malem"></div>
-  <div class="lb"><div class="lf" id="lf"></div></div>
+  <img class="ll-logo" src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-17%20111235.png" alt="Malem Labs" width="auto" height="52">
+  <div class="ll-bar"><div class="ll-fill" id="lf"></div></div>
+  <div class="ll-pct" id="lpct">0%</div>
 </div>
 
 <!-- CURSOR -->
 <div id="cur"></div>
 <div id="cur2"></div>
 
-<!-- MOBILE -->
+<!-- MOBILE MENU -->
 <div class="mob" id="mob">
-  <button class="mob-x" onclick="closeMob()">✕</button>
+  <button class="mob-x" onclick="closeMob()" aria-label="Close menu">✕</button>
   <a href="#about" onclick="closeMob()">About</a>
   <a href="#mission" onclick="closeMob()">Mission</a>
   <a href="#recova" onclick="closeMob()">Recova AI</a>
+  <a href="#how" onclick="closeMob()">How It Works</a>
   <a href="#journey" onclick="closeMob()">Journey</a>
   <a href="#contact" onclick="closeMob()">Contact</a>
-  <div class="mob-foot">Reach us at <a href="mailto:malem.site@gmail.com">malem.site@gmail.com</a></div>
+  <div class="mob-foot">Reach us at <a href="mailto:malemlabs@gmail.com">malemlabs@gmail.com</a></div>
 </div>
 
 <!-- NAV -->
-<nav id="nav">
-  <div class="nl"><img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-17%20111235.png" alt="Malem"></div>
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nl"><a href="#hero" aria-label="Malem Labs Home"><img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-21%20125947.png" alt="Malem Labs" height="38" width="auto"></a></div>
   <ul class="nls">
     <li><a href="#about">About</a></li>
     <li><a href="#mission">Mission</a></li>
     <li><a href="#recova">Recova AI</a></li>
+    <li><a href="#how">How It Works</a></li>
     <li><a href="#journey">Journey</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a class="nc" href="#contact">Get in Touch</a>
-  <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+  <a class="nc-btn" href="#contact">Get in Touch</a>
+  <button class="hbg" id="hbg" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hb hb1"></div>
-  <div class="hb hb2"></div>
-  <div class="hgrid"></div>
+<section id="hero" aria-label="Hero section">
+  <canvas id="hero-canvas"></canvas>
+  <div class="h-grid" aria-hidden="true"></div>
+  <div class="h-orb1" aria-hidden="true"></div>
+  <div class="h-orb2" aria-hidden="true"></div>
   <div class="hi">
     <div class="hl">
-      <div class="htag"><div class="htag-dot"></div><span>Manipur · India · World</span></div>
-      <h1>Where Bold<br>Vision Meets<br><em>Real Code.</em></h1>
-      <p class="hp">Malem is a technology company rising from Manipur — building world-class products that prove great innovation can emerge from anywhere on Earth.</p>
-      <div class="hbtns">
-        <a href="#recova" class="bg">
+      <div class="h-tag"><div class="h-dot"></div><span>Malem · Manipur · India</span></div>
+      <h1>Where Bold<br>Vision Meets<br><span class="gradient-text">Real Code.</span></h1>
+      <p class="h-sub">Malem is a technology company rising from the soil of Manipur — building world-class tech products that prove great innovation can emerge from <em>anywhere</em> on Earth.</p>
+      <div class="h-btns">
+        <a href="#recova" class="btn-primary">
           Explore Recova AI
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="#about" class="bo">Our Story</a>
+        <a href="#about" class="btn-ghost">Our Story</a>
       </div>
     </div>
-    <div class="hr">
-      <div class="hcm">
-        <div class="hcm-lbl">Our First Product</div>
-        <img class="hcm-logo" src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-12%20085625.png?updatedAt=1775964532274" alt="Recova AI">
-        <p class="hcm-p">AI-powered debt recovery and collections — designed to help organizations recover smarter, faster, and more efficiently.</p>
-        <div class="hcm-tag">Currently in Development</div>
+    <div class="hr" aria-hidden="true">
+      <div class="recova-card">
+        <div class="rc-label">Flagship Product by Malem</div>
+        <img class="rc-logo" src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-12%20085625.png?updatedAt=1775964532274" alt="Recova AI — AI-Powered Debt Recovery">
+        <div class="rc-tagline">Recover More. Chase Less. Spend Less.</div>
+        <p class="rc-sub">AI-powered debt recovery — automated calls, WhatsApp follow-ups, and instant payment links that supercharge your collections without the manual effort.</p>
+        <div class="rc-pill">Live & In Development</div>
       </div>
-      <div class="hfcs">
-        <div class="hfc"><div class="hfc-i">🏔️</div><div class="hfc-n">Manipur</div><div class="hfc-l">Home & Origin</div></div>
-        <div class="hfc"><div class="hfc-i">🌍</div><div class="hfc-n">Global</div><div class="hfc-l">Our Ambition</div></div>
+      <div class="h-stats">
+        <div class="h-stat"><div class="hs-n">94%</div><div class="hs-l">Recovery Rate</div></div>
+        <div class="h-stat"><div class="hs-n">3×</div><div class="hs-l">Faster</div></div>
+        <div class="h-stat"><div class="hs-n">−60%</div><div class="hs-l">Ops Cost</div></div>
       </div>
     </div>
   </div>
-  <div class="hscroll"><span class="hs-t">Scroll</span><div class="hs-l"></div></div>
+  <div class="h-scroll" aria-hidden="true"><span class="hs-txt">Scroll</span><div class="hs-line"></div></div>
 </section>
 
 <!-- TICKER -->
-<div class="tkr">
-  <div class="tkr-t" id="tt"></div>
+<div class="ticker" aria-hidden="true">
+  <div class="tkr-wrap">
+    <div class="tkr-inner" id="tkr"></div>
+  </div>
 </div>
 
 <!-- ABOUT -->
-<section id="about" class="s">
-  <div class="si">
-    <div class="ag">
-      <div class="av" data-r="left">
-        <img class="av-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80" alt="Technology">
-        <div class="av-badge"><span class="av-badge-n">2025</span><span class="av-badge-l">Founded</span></div>
-        <div class="av-pill"><div class="av-pill-g"></div><span class="av-pill-t">Building from Manipur, India</span></div>
+<section id="about" class="section section-dark" aria-labelledby="about-heading">
+  <div class="sinner">
+    <div class="about-grid">
+      <div class="about-img-wrap" data-r="left">
+        <div class="about-img-frame">
+          <img class="about-img" src="https://ik.imagekit.io/malemnganba123/ChatGPT%20Image%20Apr%2021,%202026,%2002_55_50%20PM.png">
+        </div>
+        <div class="ai-badge"><span class="ai-badge-n">2025</span><span class="ai-badge-l">Founded</span></div>
+        <div class="ai-pill"><div class="aip-dot"></div><span class="aip-t">Building from Manipur, India</span></div>
       </div>
-      <div class="at" data-r="right">
-        <div class="chip">Who We Are</div>
-        <h2 class="h2">Born from<br><em>Overlooked</em><br>Soil.</h2>
-        <p class="ld">Malem was built on a radical belief — that great companies can rise from anywhere. With the right vision, discipline, and courage, Manipur can produce technology that competes on a global level.</p>
-        <p class="ld" style="margin-top:14px;max-width:100%">We exist to prove that talent, ambition, and original thinking can create something powerful from places the world has yet to notice. We represent a new generation of builders from Manipur — determined to create lasting value for businesses, industries, and society.</p>
-        <div class="acols" style="margin-top:28px">
-          <div class="acol"><div class="acol-t">🧠 Bold Vision</div><div class="acol-b">Seeing what others can't and building toward it anyway.</div></div>
-          <div class="acol"><div class="acol-t">⚡ Discipline</div><div class="acol-b">Consistent, focused execution over flashy shortcuts.</div></div>
-          <div class="acol"><div class="acol-t">🔥 Courage</div><div class="acol-b">The nerve to build something big from somewhere small.</div></div>
-          <div class="acol"><div class="acol-t">🌏 Global Scale</div><div class="acol-b">Products built for the world, not just the neighbourhood.</div></div>
+      <div class="about-txt" data-r="right">
+        <div class="chip" id="about-heading">Who We Are</div>
+        <h2 class="s-h2">Born from<br><em>Overlooked</em><br>Soil.</h2>
+        <p class="s-p">Malem was built on a radical belief — that great companies can rise from <em>anywhere</em>. With the right vision, discipline, and courage, Manipur can produce technology that competes at a global level.</p>
+        <p class="s-p" style="margin-top:14px">We represent a new generation of builders from Manipur — determined to create lasting value for businesses, industries, and society worldwide.</p>
+        <div class="about-cols" style="margin-top:30px">
+          <div class="acol"><div class="acol-icon">🧠</div><div class="acol-t">Bold Vision</div><div class="acol-b">Seeing what others can't and building toward it anyway.</div></div>
+          <div class="acol"><div class="acol-icon">⚡</div><div class="acol-t">Discipline</div><div class="acol-b">Consistent, focused execution over flashy shortcuts.</div></div>
+          <div class="acol"><div class="acol-icon">🔥</div><div class="acol-t">Courage</div><div class="acol-b">The nerve to build something big from somewhere small.</div></div>
+          <div class="acol"><div class="acol-icon">🌏</div><div class="acol-t">Global Scale</div><div class="acol-b">Products built for the world, not just the neighbourhood.</div></div>
         </div>
       </div>
     </div>
@@ -396,152 +560,229 @@ footer{background:#02030a;padding:44px 5vw 30px;border-top:1px solid rgba(255,25
 </section>
 
 <!-- MANIFESTO -->
-<section id="man">
-  <div class="si" style="max-width:900px">
-    <div class="man-t" data-r="up"><span class="it gt">Innovation</span> is not a privilege of big cities. It belongs to anyone with the <span class="gt">courage to build.</span></div>
-    <p class="man-s" data-r="up" style="transition-delay:.15s">We are not waiting for permission. We are building belief, creating opportunity, and writing a new story for what Manipur can produce for the world.</p>
+<section id="man" aria-label="Our Manifesto">
+  <div class="man-line" aria-hidden="true"></div>
+  <div class="man-q" data-r="scale">
+    <span class="it">Innovation</span> is not a privilege of big cities.<br>
+    It belongs to anyone with the <span class="hl">courage to build.</span>
   </div>
+  <p class="man-sub" data-r="up" style="transition-delay:.15s">We are not waiting for permission. We are building belief, creating opportunity, and writing a new story for what Manipur can produce for the world.</p>
+  <div class="man-line2" aria-hidden="true"></div>
 </section>
 
 <!-- MISSION -->
-<section id="mission">
-  <div class="si">
+<section id="mission" class="section" aria-labelledby="mission-heading">
+  <div class="sinner">
     <div data-r="up">
-      <div class="chip">Our Purpose</div>
-      <h2 class="h2">Mission.<br><em>Vision.</em> Values.</h2>
+      <div class="chip" id="mission-heading">Our Purpose</div>
+      <h2 class="s-h2">Mission.<br><em>Vision.</em> Values.</h2>
     </div>
     <div class="bento">
       <div class="bc bc1" data-r="up" style="transition-delay:.05s">
-        <div class="bc-i">🏔️</div>
+        <div class="bc-ico">🏔️</div>
         <div class="bc-tag">Mission</div>
         <div class="bc-h lg">Build a global tech giant from Manipur.</div>
-        <div class="bc-p">Create meaningful solutions for real-world problems and make Manipur proud through excellence, innovation, and impact.</div>
+        <p class="bc-p">Create meaningful solutions for real-world problems and make Manipur proud through excellence, innovation, and lasting impact.</p>
       </div>
       <div class="bc bc2" data-r="up" style="transition-delay:.1s">
         <div class="bc-tag">Vision</div>
-        <div class="bc-h lg">Build from Manipur. Solve for the world.</div>
-        <div class="bc-p" style="margin-top:12px">Create technology that truly matters — intelligent systems that solve hard business problems with clarity, speed, and precision.</div>
+        <div class="bc-h lg">Build from Manipur. Solve for the World.</div>
+        <p class="bc-p" style="margin-top:12px">Create technology that truly matters — intelligent systems that solve hard business problems with clarity, speed, and precision at global scale.</p>
       </div>
       <div class="bc bc3" data-r="up" style="transition-delay:.15s">
         <div class="bc-n">01</div>
         <div class="bc-h">Belief</div>
-        <div class="bc-p">We build belief — in ourselves, in Manipur, and in what's possible.</div>
+        <p class="bc-p">We build belief — in ourselves, in Manipur, and in what's possible from here.</p>
       </div>
       <div class="bc bc4" data-r="up" style="transition-delay:.2s">
         <div class="bc-n">02</div>
         <div class="bc-h">Opportunity</div>
-        <div class="bc-p">Creating doors that didn't exist — for builders from overlooked places.</div>
+        <p class="bc-p">Creating doors that didn't exist — for builders from overlooked places.</p>
       </div>
       <div class="bc bc5" data-r="up" style="transition-delay:.25s">
         <div class="bc-n">03</div>
         <div class="bc-h">Legacy</div>
-        <div class="bc-p">A company that leaves a mark long after we're gone.</div>
+        <p class="bc-p">A company that leaves a meaningful mark long after we're gone.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RECOVA -->
-<section id="recova">
-  <div class="si">
-    <div class="rhd" data-r="up">
+<!-- RECOVA AI -->
+<section id="recova" class="section section-dark" aria-labelledby="recova-heading">
+  <div class="sinner">
+    <div class="recova-header" data-r="up">
       <div>
-        <div class="chip">Flagship Product</div>
-        <h2 class="h2">Meet <em>Recova AI</em></h2>
+        <div class="chip" id="recova-heading">Flagship Product</div>
+        <h2 class="s-h2">Meet <em>Recova AI</em></h2>
+        <p class="s-p" style="margin-top:14px;max-width:500px">The AI-powered debt recovery platform built to help every lending organization <strong style="color:#fff">recover more, chase less, and spend less</strong> — without the manual grind.</p>
       </div>
-      <div class="rlz">
-        <img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-12%20085625.png?updatedAt=1775964532274" alt="Recova AI">
-        <div class="rlz-d"></div>
-        <div class="rlz-l">by Malem</div>
+      <div class="recova-logo-wrap">
+        <img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-12%20085625.png?updatedAt=1775964532274" alt="Recova AI Logo" height="54">
+        <div class="rlw-div"></div>
+        <div class="rlw-txt">Powered by<br><strong>Malem</strong></div>
       </div>
     </div>
-    <div class="rb">
-      <div class="rl" data-r="left">
-        <p class="ld">Recova AI modernizes debt recovery through artificial intelligence, smarter workflows, and more effective communication systems. It helps organizations recover better, operate efficiently, and improve their entire collections process.</p>
-        <p class="ld" style="margin-top:14px;max-width:100%">Recova AI is not just a product — it is the first chapter of a much bigger story. Our first step toward building intelligent systems that solve hard business problems with clarity, speed, and precision.</p>
-        <div class="rfs" style="margin-top:30px">
-          <div class="rfi"><div class="rfi-i">🤖</div><div><div class="rfi-h">AI-Powered Scoring</div><div class="rfi-b">Predict repayment likelihood with ML models that get smarter with every interaction.</div></div></div>
-          <div class="rfi"><div class="rfi-i">⚡</div><div><div class="rfi-h">Automated Workflows</div><div class="rfi-b">Intelligent automation that eliminates repetitive work and frees teams for high-value decisions.</div></div></div>
-          <div class="rfi"><div class="rfi-i">📡</div><div><div class="rfi-h">Smart Communication</div><div class="rfi-b">Multi-channel, personalized outreach that dramatically improves debtor engagement rates.</div></div></div>
-          <div class="rfi"><div class="rfi-i">🔒</div><div><div class="rfi-h">Compliance-First</div><div class="rfi-b">Built-in guardrails ensuring every interaction stays within regulatory boundaries.</div></div></div>
+    <div class="recova-grid">
+      <div data-r="left">
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:8px">AI-Powered Collections,<br>Redefined.</h3>
+        <p class="s-p">Recova AI modernizes debt recovery through intelligent automation, smarter workflows, and multi-channel communication — transforming how organizations collect what they are owed.</p>
+        <div class="recova-features">
+          <div class="rf-item">
+            <div class="rf-icon">📞</div>
+            <div>
+              <div class="rf-h">Automated Calls & WhatsApp</div>
+              <div class="rf-b">Consistent, timely follow-ups with every borrower through automated calls and WhatsApp messages sent from your own number — so borrowers trust and respond.</div>
+            </div>
+          </div>
+          <div class="rf-item">
+            <div class="rf-icon">💳</div>
+            <div>
+              <div class="rf-h">Instant Payment Links</div>
+              <div class="rf-b">Send payment links directly in follow-up messages, making it frictionless for borrowers to pay immediately — increasing repayment rates dramatically.</div>
+            </div>
+          </div>
+          <div class="rf-item">
+            <div class="rf-icon">⚡</div>
+            <div>
+              <div class="rf-h">Chase Less Automation</div>
+              <div class="rf-b">Automates the entire follow-up process — from reminders to payment tracking — so your team spends minimal time chasing borrowers manually.</div>
+            </div>
+          </div>
+          <div class="rf-item">
+            <div class="rf-icon">💰</div>
+            <div>
+              <div class="rf-h">Spend Less, Recover More</div>
+              <div class="rf-b">By reducing manual calling, repeated follow-ups, and field visits, Recova AI significantly lowers your operational and recovery costs.</div>
+            </div>
+          </div>
+          <div class="rf-item">
+            <div class="rf-icon">🤖</div>
+            <div>
+              <div class="rf-h">AI-Powered Scoring</div>
+              <div class="rf-b">ML models predict repayment likelihood and prioritize accounts intelligently — getting smarter with every interaction your team has.</div>
+            </div>
+          </div>
+          <div class="rf-item">
+            <div class="rf-icon">🔒</div>
+            <div>
+              <div class="rf-h">Compliance-First</div>
+              <div class="rf-b">Built-in guardrails ensure every automated interaction stays within regulatory boundaries — protecting your organization at every step.</div>
+            </div>
+          </div>
         </div>
       </div>
       <div data-r="right">
         <div class="rdash">
           <div class="rdb">
             <div class="rdd" style="background:#ff5f57"></div>
-            <div class="rdd" style="background:#fbbf24"></div>
-            <div class="rdd" style="background:#34d399"></div>
-            <div class="rdt"></div>
+            <div class="rdd" style="background:#fbbf24;margin-left:4px"></div>
+            <div class="rdd" style="background:#34d399;margin-left:4px"></div>
+            <div class="rdb-txt">Recova AI · Live</div>
           </div>
-          <div class="rdss">
-            <div class="rds"><div class="rdsv">94%</div><div class="rdsl">Recovery Rate</div></div>
-            <div class="rds"><div class="rdsv">3×</div><div class="rdsl">Faster</div></div>
-            <div class="rds"><div class="rdsv">−60%</div><div class="rdsl">Ops Cost</div></div>
+          <div class="rd-stats">
+            <div class="rd-stat"><div class="rdv">94%</div><div class="rdl">Recovery Rate</div></div>
+            <div class="rd-stat"><div class="rdv">3×</div><div class="rdl">Faster</div></div>
+            <div class="rd-stat"><div class="rdv">−60%</div><div class="rdl">Ops Cost</div></div>
           </div>
-          <div class="rdct">Performance Metrics</div>
-          <div class="rdr"><div class="rdrl">AI Scoring</div><div class="rdtr"><div class="rdfi" style="width:92%"></div></div><div class="rdrv">92%</div></div>
-          <div class="rdr"><div class="rdrl">Automation</div><div class="rdtr"><div class="rdfi" style="width:87%;transition-delay:.15s"></div></div><div class="rdrv">87%</div></div>
-          <div class="rdr"><div class="rdrl">Engagement</div><div class="rdtr"><div class="rdfi" style="width:76%;transition-delay:.3s"></div></div><div class="rdrv">76%</div></div>
-          <div class="rdr"><div class="rdrl">Compliance</div><div class="rdtr"><div class="rdfi" style="width:99%;transition-delay:.45s"></div></div><div class="rdrv">99%</div></div>
-          <div class="rdct" style="margin-top:18px">Live Activity</div>
-          <div class="rdac">
-            <div class="rdai"><div class="rdaid" style="background:#4ade80"></div><div class="rdait">Case #4821 — payment received</div><div class="rdatime">2s ago</div></div>
-            <div class="rdai"><div class="rdaid" style="background:#6690ff"></div><div class="rdait">AI scored 247 new accounts</div><div class="rdatime">14s ago</div></div>
-            <div class="rdai"><div class="rdaid" style="background:#fbbf24"></div><div class="rdait">Campaign sent to 1,200 contacts</div><div class="rdatime">1m ago</div></div>
+          <div class="rd-bars-lbl">Performance Metrics</div>
+          <div class="rd-bar"><div class="rd-bar-l">AI Scoring</div><div class="rd-bar-track"><div class="rd-bar-fill" style="width:92%"></div></div><div class="rd-bar-v">92%</div></div>
+          <div class="rd-bar"><div class="rd-bar-l">Automation</div><div class="rd-bar-track"><div class="rd-bar-fill" style="width:87%;transition-delay:.15s"></div></div><div class="rd-bar-v">87%</div></div>
+          <div class="rd-bar"><div class="rd-bar-l">Engagement</div><div class="rd-bar-track"><div class="rd-bar-fill" style="width:76%;transition-delay:.3s"></div></div><div class="rd-bar-v">76%</div></div>
+          <div class="rd-bar"><div class="rd-bar-l">Compliance</div><div class="rd-bar-track"><div class="rd-bar-fill" style="width:99%;transition-delay:.45s"></div></div><div class="rd-bar-v">99%</div></div>
+          <div class="rd-activity">
+            <div class="rd-act-lbl">Live Activity</div>
+            <div class="rd-act-item"><div class="rd-act-dot" style="background:#4ade80"></div><div class="rd-act-txt">Case #4821 — payment received</div><div class="rd-act-time">2s ago</div></div>
+            <div class="rd-act-item"><div class="rd-act-dot" style="background:#60a5fa"></div><div class="rd-act-txt">AI scored 247 new accounts</div><div class="rd-act-time">14s ago</div></div>
+            <div class="rd-act-item"><div class="rd-act-dot" style="background:#fbbf24"></div><div class="rd-act-txt">WhatsApp campaign → 1,200 contacts</div><div class="rd-act-time">1m ago</div></div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="section" aria-labelledby="how-heading">
+  <div class="sinner">
+    <div style="text-align:center;max-width:560px;margin:0 auto 12px" data-r="up">
+      <div class="chip" id="how-heading">Simple Process</div>
+      <h2 class="s-h2">How <em>Recova AI</em><br>Works</h2>
+      <p class="s-p" style="margin-top:16px">Three simple steps from setup to recovered payments.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step" data-r="up" style="transition-delay:.05s">
+        <div class="how-num"><span class="how-num-i">01</span></div>
+        <div class="how-icon">📋</div>
+        <h3 class="how-h">Upload Your Cases</h3>
+        <p class="how-p">Import your borrower list in seconds. Recova AI analyzes every account and scores repayment likelihood with ML models.</p>
+      </div>
+      <div class="how-step" data-r="up" style="transition-delay:.1s">
+        <div class="how-num"><span class="how-num-i">02</span></div>
+        <div class="how-icon">🤖</div>
+        <h3 class="how-h">AI Automates Follow-Ups</h3>
+        <p class="how-p">Automated calls and WhatsApp messages go out from your own number — with personalized scripts and instant payment links attached.</p>
+      </div>
+      <div class="how-step" data-r="up" style="transition-delay:.15s">
+        <div class="how-num"><span class="how-num-i">03</span></div>
+        <div class="how-icon">💸</div>
+        <h3 class="how-h">Collect & Track</h3>
+        <p class="how-p">Borrowers click, pay, and you're notified instantly. Track everything on a live dashboard — zero manual chasing needed.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- JOURNEY -->
-<section id="journey">
-  <div class="si">
-    <div style="text-align:center;max-width:580px;margin:0 auto" data-r="up">
-      <div class="chip">The Road Ahead</div>
-      <h2 class="h2">Our Journey<br><em>Is Just Beginning.</em></h2>
-      <p class="ld" style="margin:18px auto 0;text-align:center">Each phase brings us closer to our ultimate goal — a globally respected technology company born and built in Manipur.</p>
+<section id="journey" class="section" aria-labelledby="journey-heading">
+  <div class="sinner">
+    <div class="journey-header" data-r="up">
+      <div class="chip" id="journey-heading">The Road Ahead</div>
+      <h2 class="s-h2">Our Journey<br><em>Is Just Beginning.</em></h2>
+      <p class="s-p">Each phase brings us closer to our ultimate goal — a globally respected technology company born and built in Manipur.</p>
     </div>
-    <div class="jg">
-      <div class="ji act" data-r="up" style="transition-delay:.05s"><div class="ji-n">01</div><div class="ji-ph">Now · Active</div><div class="ji-h">Founding & First Product</div><div class="ji-b">Malem is founded. Recova AI development begins. The first line of code, written in Manipur.</div></div>
-      <div class="ji" data-r="up" style="transition-delay:.1s"><div class="ji-n">02</div><div class="ji-ph">Near-Term</div><div class="ji-h">Recova AI Launch</div><div class="ji-b">Recova AI goes live. Organizations begin recovering smarter with our AI-first platform.</div></div>
-      <div class="ji" data-r="up" style="transition-delay:.15s"><div class="ji-n">03</div><div class="ji-ph">Growth Phase</div><div class="ji-h">Scale & Expand</div><div class="ji-b">Grow across industries. Build a world-class team from Manipur. Expand our product portfolio.</div></div>
-      <div class="ji" data-r="up" style="transition-delay:.2s"><div class="ji-n">04</div><div class="ji-ph">The Vision</div><div class="ji-h">Global Tech Giant</div><div class="ji-b">A globally recognized technology company — built from Manipur, respected everywhere.</div></div>
+    <div class="j-grid" style="position:relative">
+      <div class="j-line" aria-hidden="true"></div>
+      <div class="j-item active" data-r="up" style="transition-delay:.05s"><div class="j-num">01</div><div class="j-phase">Now · Active</div><h3 class="j-h">Founding & First Product</h3><p class="j-b">Malem Labs is founded. Recova AI development begins. The first line of code, written in Manipur.</p></div>
+      <div class="j-item" data-r="up" style="transition-delay:.1s"><div class="j-num">02</div><div class="j-phase">Near-Term</div><h3 class="j-h">Recova AI Launch</h3><p class="j-b">Recova AI goes live. Organizations begin recovering smarter with our AI-first platform.</p></div>
+      <div class="j-item" data-r="up" style="transition-delay:.15s"><div class="j-num">03</div><div class="j-phase">Growth Phase</div><h3 class="j-h">Scale & Expand</h3><p class="j-b">Grow across industries. Build a world-class team from Manipur. Expand our product portfolio.</p></div>
+      <div class="j-item" data-r="up" style="transition-delay:.2s"><div class="j-num">04</div><div class="j-phase">The Vision</div><h3 class="j-h">Global Tech Giant</h3><p class="j-b">A globally recognized technology company — built from Manipur, respected everywhere on Earth.</p></div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="si">
+<section id="contact" class="section section-dark" aria-labelledby="contact-heading">
+  <div class="sinner">
+    <div data-r="up">
+      <div class="chip" id="contact-heading">Let's Talk</div>
+      <h2 class="s-h2">Build Something<br><em>Bold</em> Together.</h2>
+    </div>
     <div class="cg">
-      <div class="cl" data-r="left">
-        <div class="chip">Let's Talk</div>
-        <h2 class="h2">Build Something<br><em>Bold</em> Together.</h2>
-        <p class="ld">Whether you're a potential partner, investor, customer, or someone who simply believes in what we're building — we'd love to hear from you.</p>
-        <div class="cls">
-          <a class="cli" href="https://wa.me/918974898579" target="_blank" rel="noopener"><div class="ci-ico wa">💬</div><div><div class="ci-lbl">WhatsApp</div><div class="ci-val">+91 89748 98579</div></div><div class="ci-arr">→</div></a>
-          <a class="cli" href="mailto:malem.site@gmail.com"><div class="ci-ico em">✉️</div><div><div class="ci-lbl">Email</div><div class="ci-val">malem.site@gmail.com</div></div><div class="ci-arr">→</div></a>
-          <a class="cli" href="https://www.facebook.com/profile.php?id=61579907098126" target="_blank" rel="noopener"><div class="ci-ico fb">📘</div><div><div class="ci-lbl">Facebook</div><div class="ci-val">Malem on Facebook</div></div><div class="ci-arr">→</div></a>
+      <div data-r="left">
+        <p class="s-p" style="margin-top:20px">Whether you're a potential partner, investor, customer, or someone who simply believes in what we're building — we'd love to hear from you.</p>
+        <div class="c-links">
+          <a class="c-link" href="https://wa.me/918974897976" target="_blank" rel="noopener noreferrer"><div class="c-ico wa">💬</div><div><div class="c-lbl">WhatsApp</div><div class="c-val">+91 89748 97976</div></div><div class="c-arr">→</div></a>
+          <a class="c-link" href="mailto:malemlabs@gmail.com"><div class="c-ico em">✉️</div><div><div class="c-lbl">Email</div><div class="c-val">malemlabs@gmail.com</div></div><div class="c-arr">→</div></a>
+          <a class="c-link" href="https://malemlabs.com" target="_blank" rel="noopener noreferrer"><div class="c-ico web">🌐</div><div><div class="c-lbl">Website</div><div class="c-val">malemlabs.com</div></div><div class="c-arr">→</div></a>
+          <a class="c-link" href="https://www.facebook.com/profile.php?id=61579907098126" target="_blank" rel="noopener noreferrer"><div class="c-ico fb">📘</div><div><div class="c-lbl">Facebook</div><div class="c-val">Malem Labs on Facebook</div></div><div class="c-arr">→</div></a>
         </div>
       </div>
       <div data-r="right">
-        <div class="cr-map">
-          <div class="crd"></div>
-          <div class="crg"></div>
-          <div class="crpin">
-            <div class="crring"><div class="crin">📍</div></div>
-            <div class="crl">Manipur, India</div>
-            <div class="crs">Where it all begins</div>
+        <div class="c-map">
+          <div class="map-dots"></div>
+          <div class="map-glow"></div>
+          <div class="map-pin">
+            <div class="map-ring"><div class="map-pin-i">📍</div></div>
+            <div class="map-city">Manipur, India</div>
+            <div class="map-sub">Where it all begins</div>
           </div>
         </div>
-        <div class="cris">
-          <div class="cri"><div class="cri-l">Founded</div><div class="cri-v">2025, Manipur</div></div>
-          <div class="cri"><div class="cri-l">Status</div><div class="cri-v">Building actively</div></div>
-          <div class="cri"><div class="cri-l">Product</div><div class="cri-v">Recova AI</div></div>
-          <div class="cri"><div class="cri-l">Email</div><div class="cri-v">malem.site@gmail.com</div></div>
+        <div class="c-info">
+          <div class="ci"><div class="ci-l">Founded</div><div class="ci-v">2025, Manipur</div></div>
+          <div class="ci"><div class="ci-l">Status</div><div class="ci-v">Building actively</div></div>
+          <div class="ci"><div class="ci-l">Product</div><div class="ci-v">Recova AI</div></div>
+          <div class="ci"><div class="ci-l">Email</div><div class="ci-v">malemlabs@gmail.com</div></div>
         </div>
       </div>
     </div>
@@ -552,60 +793,119 @@ footer{background:#02030a;padding:44px 5vw 30px;border-top:1px solid rgba(255,25
 <footer>
   <div class="ft">
     <div class="fb">
-      <img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-17%20111235.png" alt="Malem">
-      <p>A technology company built from the soil of Manipur with a bold vision to create world-class products for the world.</p>
+      <img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-17%20111235.png" alt="Malem Labs" height="34" width="auto">
+      <p>A technology company built from the soil of Manipur with a bold vision to create world-class AI products for the world.</p>
     </div>
     <div class="fc"><h5>Company</h5><a href="#about">About Malem</a><a href="#mission">Mission</a><a href="#journey">Journey</a></div>
-    <div class="fc"><h5>Products</h5><a href="#recova">Recova AI</a></div>
-    <div class="fc"><h5>Connect</h5><a href="https://wa.me/918974898579" target="_blank">WhatsApp</a><a href="mailto:malem.site@gmail.com">Email</a><a href="https://www.facebook.com/profile.php?id=61579907098126" target="_blank">Facebook</a></div>
+    <div class="fc"><h5>Products</h5><a href="#recova">Recova AI</a><a href="#how">How It Works</a></div>
+    <div class="fc"><h5>Connect</h5><a href="https://wa.me/918974897976" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:malemlabs@gmail.com">Email</a><a href="https://malemlabs.com" target="_blank" rel="noopener">Website</a><a href="https://www.facebook.com/profile.php?id=61579907098126" target="_blank" rel="noopener">Facebook</a></div>
   </div>
   <div class="fb2">
     <p>© 2025 <span>Malem</span>. Built with pride in Manipur, India.</p>
-    <p style="font-size:11px;color:rgba(255,255,255,.18)">Build from Manipur · Solve for the World</p>
+    <p style="font-size:11px;color:rgba(255,255,255,.15)">Build from Manipur · Solve for the World</p>
   </div>
 </footer>
 
 <script>
 /* LOADER */
-const lf=document.getElementById('lf');
+const lf=document.getElementById('lf'),lpct=document.getElementById('lpct');
 let p=0;
-const li=setInterval(()=>{p=Math.min(p+Math.random()*18,94);lf.style.width=p+'%'},80);
-window.addEventListener('load',()=>{clearInterval(li);lf.style.width='100%';setTimeout(()=>document.getElementById('loader').classList.add('out'),350)});
+const li=setInterval(()=>{p=Math.min(p+Math.random()*16,94);lf.style.width=p+'%';lpct.textContent=Math.round(p)+'%'},80);
+window.addEventListener('load',()=>{clearInterval(li);lf.style.width='100%';lpct.textContent='100%';setTimeout(()=>document.getElementById('loader').classList.add('out'),400)});
 
 /* CURSOR */
 const c1=document.getElementById('cur'),c2=document.getElementById('cur2');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
-(function loop(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;c2.style.left=rx+'px';c2.style.top=ry+'px';requestAnimationFrame(loop)})();
-document.querySelectorAll('a,button,.rfi,.bc,.hfc').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{c1.style.width='18px';c1.style.height='18px';c2.style.width='52px';c2.style.height='52px'});
-  el.addEventListener('mouseleave',()=>{c1.style.width='8px';c1.style.height='8px';c2.style.width='32px';c2.style.height='32px'});
+(function loop(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;c2.style.left=rx+'px';c2.style.top=ry+'px';requestAnimationFrame(loop)})();
+document.querySelectorAll('a,button,.rf-item,.bc,.h-stat,.acol').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hovering'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hovering'));
 });
 
-/* NAV */
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>60),{passive:true});
+/* NAV SCROLL */
+const navEl=document.getElementById('nav');
+window.addEventListener('scroll',()=>navEl.classList.toggle('sc',scrollY>60),{passive:true});
 
-/* MOBILE */
+/* MOBILE MENU */
 document.getElementById('hbg').onclick=()=>document.getElementById('mob').classList.add('open');
 function closeMob(){document.getElementById('mob').classList.remove('open')}
 
 /* TICKER */
-const words=['Built in Manipur','Recova AI','Debt Recovery Innovation','AI-Powered Collections','World-Class Technology','From India to the World','Bold Vision. Real Code.','Building Belief'];
-const tt=document.getElementById('tt');
-const html=words.map(w=>`<span class="tkr-i">${w}<span class="tkr-sep">✦</span></span>`).join('');
-tt.innerHTML=html+html;
+const words=['Built in Manipur','Recova AI','Debt Recovery Innovation','AI-Powered Collections','World-Class Technology','From India to the World','Recover More Chase Less Spend Less','Malem Labs'];
+const tkr=document.getElementById('tkr');
+const items=words.map(w=>`<span class="tkr-item">${w}<span class="tkr-sep">✦</span></span>`).join('');
+tkr.innerHTML=items+items;
+
+/* HERO CANVAS PARTICLES */
+const canvas=document.getElementById('hero-canvas');
+const ctx=canvas.getContext('2d');
+let W,H,pts=[];
+function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight}
+resize();
+window.addEventListener('resize',resize);
+for(let i=0;i<80;i++)pts.push({x:Math.random()*1200,y:Math.random()*800,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.5,o:Math.random()*.5+.1});
+function drawCanvas(){
+  ctx.clearRect(0,0,W,H);
+  pts.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(0,200,255,${p.o})`;ctx.fill();
+  });
+  for(let i=0;i<pts.length;i++){
+    for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<120){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(0,79,249,${.12*(1-d/120)})`;ctx.lineWidth=.6;ctx.stroke()}
+    }
+  }
+  requestAnimationFrame(drawCanvas);
+}
+drawCanvas();
 
 /* SCROLL REVEAL */
-const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');else e.target.classList.remove('vis')})},{threshold:.08,rootMargin:'0px 0px -50px 0px'});
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');else e.target.classList.remove('vis')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('[data-r]').forEach(el=>ro.observe(el));
 
 /* BARS TRIGGER */
-const bo=new IntersectionObserver(entries=>{entries.forEach(e=>{e.target.querySelectorAll('.rdfi').forEach(b=>b.classList.toggle('go',e.isIntersecting))})},{threshold:.25});
+const bo=new IntersectionObserver(entries=>{entries.forEach(e=>{e.target.querySelectorAll('.rd-bar-fill').forEach(b=>b.classList.toggle('go',e.isIntersecting))})},{threshold:.25});
 document.querySelectorAll('.rdash').forEach(el=>bo.observe(el));
 
 /* PARALLAX */
-window.addEventListener('scroll',()=>{const y=scrollY;document.querySelector('.hb1').style.transform=`translateY(${y*.07}px)`;document.querySelector('.hb2').style.transform=`translateY(${-y*.045}px)`},{passive:true});
+window.addEventListener('scroll',()=>{
+  const y=scrollY;
+  const o1=document.querySelector('.h-orb1'),o2=document.querySelector('.h-orb2');
+  if(o1)o1.style.transform=`translateY(${y*.08}px)`;
+  if(o2)o2.style.transform=`translateY(${-y*.05}px)`;
+},{passive:true});
+
+/* ANIMATE ACTIVITY FEED */
+const activities=[
+  {col:'#4ade80',txt:'Case #4821 — payment received',t:'2s ago'},
+  {col:'#60a5fa',txt:'AI scored 247 new accounts',t:'14s ago'},
+  {col:'#fbbf24',txt:'WhatsApp campaign → 1,200 contacts',t:'1m ago'},
+  {col:'#a78bfa',txt:'Case #5104 — follow-up sent',t:'3m ago'},
+  {col:'#4ade80',txt:'Case #3892 — payment received',t:'5m ago'},
+  {col:'#60a5fa',txt:'New batch of 88 accounts analyzed',t:'7m ago'},
+];
+let actIdx=0;
+setInterval(()=>{
+  const items=document.querySelectorAll('.rd-act-item');
+  if(!items.length)return;
+  actIdx=(actIdx+1)%activities.length;
+  const item=items[0];
+  item.style.opacity='0';
+  item.style.transform='translateY(-10px)';
+  setTimeout(()=>{
+    const a=activities[actIdx];
+    item.querySelector('.rd-act-dot').style.background=a.col;
+    item.querySelector('.rd-act-txt').textContent=a.txt;
+    item.querySelector('.rd-act-time').textContent=a.t;
+    item.style.transition='none';
+    item.style.opacity='0';item.style.transform='translateY(10px)';
+    setTimeout(()=>{item.style.transition='opacity .4s,transform .4s';item.style.opacity='1';item.style.transform='none'},50);
+  },400);
+},3000);
 </script>
 </body>
 </html>
