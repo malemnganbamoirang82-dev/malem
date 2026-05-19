@@ -521,7 +521,11 @@ footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--borde
 /* RESPONSIVE */
 @media(max-width:1024px){
   .hi,.about-grid,.recova-grid,.cg{grid-template-columns:1fr}
-  .hr{display:none}
+  .hi{gap:32px}
+  .hr{display:block}
+  .recova-card{padding:20px;border-radius:16px;margin-bottom:12px}
+  .rc-logo{height:36px;margin-bottom:12px}
+  .h-stats{grid-template-columns:repeat(3,1fr);gap:8px}
   .rdash{position:static}
   .bento .bc1,.bento .bc2{grid-column:span 12}
   .bento .bc3,.bento .bc4,.bento .bc5{grid-column:span 4}
@@ -539,13 +543,17 @@ footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--borde
   .h-stats{grid-template-columns:repeat(3,1fr)}
   .c-info{grid-template-columns:1fr}
   .how-steps{grid-template-columns:1fr !important}
+  .recova-card{padding:16px}
+  .rc-tagline{font-size:1rem}
+  .hs-n{font-size:1.4rem}
 }
 @media(max-width:480px){
   .j-grid{grid-template-columns:1fr}
   .h-btns{flex-direction:column}
   .h-btns a{justify-content:center}
-  .h-stats{grid-template-columns:1fr 1fr}
+  .h-stats{grid-template-columns:repeat(3,1fr)}
   .rd-stats{grid-template-columns:1fr 1fr}
+  .hi{gap:24px}
 }
 </style>
 </head>
@@ -613,7 +621,7 @@ footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--borde
         <div class="rc-label">Flagship Product by Malem</div>
         <img class="rc-logo" src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-12%20085625.png?updatedAt=1775964532274" alt="Recova AI — AI-Powered Debt Recovery">
         <div class="rc-tagline">Reduce Late Payments. Automatically.</div>
-        <p class="rc-sub">Recova AI follows up on every borrower, detects every Promise to Pay, and tracks every commitment — so your team collects more without chasing manually.</p>
+        <p class="rc-sub">Your MFI recovers more money every month — from the same borrowers, with the same team. No extra headcount. No manual chasing.</p>
         <div class="rc-pill">Live & In Development</div>
       </div>
       <div class="h-stats">
@@ -716,7 +724,7 @@ footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--borde
       <div>
         <div class="chip" id="recova-heading">Flagship Product</div>
         <h2 class="s-h2">Meet <em>Recova AI</em></h2>
-        <p class="s-p" style="margin-top:14px;max-width:520px">The AI platform that <strong style="color:#fff">reduces late payments</strong> for MFIs and NBFCs — by automatically following up on every borrower, detecting every promise, and making sure every rupee owed comes back.</p>
+        <p class="s-p" style="margin-top:14px;max-width:520px">More of your borrowers pay on time. More of your PTPs get honored. Fewer accounts age into NPA. That's the only outcome that matters — and that's what Recova AI delivers.</p>
       </div>
       <div class="recova-logo-wrap">
         <img src="https://ik.imagekit.io/malemnganba123/Screenshot%202026-04-12%20085625.png?updatedAt=1775964532274" alt="Recova AI Logo" height="54">
@@ -727,48 +735,48 @@ footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--borde
     <div class="recova-grid">
       <div data-r="left">
         <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:8px">Every promise tracked.<br>Every rupee followed up.</h3>
-        <p class="s-p">When your borrower says "main kal dunga," Recova AI hears it, logs it, and follows through — automatically. No agent needed. No broken promise slipping through.</p>
+        <p class="s-p">Your collections team stops firefighting and starts seeing results. Every borrower who commits to a payment date — pays on that date. Or gets reminded until they do.</p>
         <div class="recova-features">
           <div class="rf-item">
             <div class="rf-icon">🎯</div>
             <div>
-              <div class="rf-h">Auto PTP Detection</div>
-              <div class="rf-b">When the AI calls or messages a borrower and they commit to a date, Recova AI detects the Promise to Pay instantly and logs it — no manual entry, no missed commitments.</div>
+              <div class="rf-h">More PTPs Honored, Less Money Lost</div>
+              <div class="rf-b">When a borrower commits to a payment date, that promise gets followed through every time. Your PTP fulfillment rate climbs — which means more money in your books by end of month.</div>
             </div>
           </div>
           <div class="rf-item">
             <div class="rf-icon">🔔</div>
             <div>
-              <div class="rf-h">Timely Follow-Ups & Reminders</div>
-              <div class="rf-b">Automated WhatsApp messages and AI calls go out at the right time — day before, day of, day after. Borrowers are reminded before they forget, not chased after they've gone cold.</div>
+              <div class="rf-h">Borrowers Pay Before They Go Cold</div>
+              <div class="rf-b">The right nudge at the right time stops a late borrower from becoming a defaulter. You collect money that would have otherwise slipped into 30 DPD, 60 DPD — and eventually NPA.</div>
             </div>
           </div>
           <div class="rf-item">
             <div class="rf-icon">📊</div>
             <div>
-              <div class="rf-h">Live PTP Tracker Dashboard</div>
-              <div class="rf-b">A real-time view of every promise — Honored, Broken, Pending. Your collections head sees exactly which accounts need attention before they age past the 30 DPD mark.</div>
+              <div class="rf-h">Your Team Spots Every Risk — Before It's Too Late</div>
+              <div class="rf-b">No more end-of-month surprises. Know exactly which accounts are about to breach 30 DPD while there's still time to act. Stop fires before they start — not after.</div>
             </div>
           </div>
           <div class="rf-item">
             <div class="rf-icon">💳</div>
             <div>
-              <div class="rf-h">Instant Payment Links</div>
-              <div class="rf-b">Payment links sent in the same message as the follow-up — so when a borrower is ready to pay, they can do it in one tap, instantly.</div>
+              <div class="rf-h">Borrowers Pay the Moment They're Ready</div>
+              <div class="rf-b">Removing every barrier between intent and payment means money lands in your account the same day — not a week later when the borrower has already spent it elsewhere.</div>
             </div>
           </div>
           <div class="rf-item">
             <div class="rf-icon">📞</div>
             <div>
-              <div class="rf-h">WhatsApp-First, AI Call Escalation</div>
-              <div class="rf-b">Every follow-up starts with a low-cost WhatsApp nudge. Only unresponsive borrowers get an AI voice call — keeping your infra costs minimal without missing anyone.</div>
+              <div class="rf-h">Maximum Collection Coverage at Minimum Cost</div>
+              <div class="rf-b">Every borrower in your portfolio gets followed up — at a fraction of what manual calling costs. Your infra spend stays low while your collection rate climbs. No borrower falls through the gap.</div>
             </div>
           </div>
           <div class="rf-item">
             <div class="rf-icon">🔒</div>
             <div>
-              <div class="rf-h">RBI & TRAI Compliant</div>
-              <div class="rf-b">DND checks, calling hour restrictions, and consent management built in — every interaction stays within RBI collections guidelines. Fully compliant, fully automated.</div>
+              <div class="rf-h">Zero Risk to Your License or Reputation</div>
+              <div class="rf-b">Every automated interaction protects your institution from regulatory action. Recover money at scale without ever worrying about RBI or TRAI violations. Fully safe, fully covered.</div>
             </div>
           </div>
         </div>
@@ -809,7 +817,7 @@ footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--borde
     <div style="text-align:center;max-width:600px;margin:0 auto 12px" data-r="up">
       <div class="chip" id="how-heading">How It Works</div>
       <h2 class="s-h2">From Due Date to<br><em>Payment Received.</em></h2>
-      <p class="s-p" style="margin-top:16px">Recova AI runs the entire follow-up loop — so your team only sees outcomes, not work.</p>
+      <p class="s-p" style="margin-top:16px">Your team sees one thing: money collected. Everything else happens automatically.</p>
     </div>
     <div class="how-steps" style="grid-template-columns:repeat(4,1fr)">
       <div class="how-step" data-r="up" style="transition-delay:.05s">
@@ -833,7 +841,7 @@ footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--borde
       <div class="how-step" data-r="up" style="transition-delay:.2s">
         <div class="how-num"><span class="how-num-i">04</span></div>
         <div class="how-icon">💸</div>
-        <h3 class="how-h">Follow Up Until Paid</h3>
+        <h3 class="how-h">Follow Up Until Paid.</h3>
         <p class="how-p">On promise date, a reminder goes out with a payment link. Borrower pays in one tap. You're notified. NPA clock stops. Done.</p>
       </div>
     </div>
@@ -860,7 +868,7 @@ footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--borde
           <div class="founder-photo-title">Founder &amp; CEO</div>
           <div class="founder-photo-loc">
             <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            Heirok Part 2 Maning Leikai, Thoubal, Manipur
+            Heirok Part 2 Maning Leikai, Thoubal, Manipur, India
           </div>
           <!-- Contact buttons inside photo card -->
           <div class="founder-card-btns">
@@ -917,7 +925,7 @@ footer{background:#02020c;padding:50px 5vw 28px;border-top:1px solid var(--borde
     <div class="j-grid" style="position:relative">
       <div class="j-line" aria-hidden="true"></div>
       <div class="j-item active" data-r="up" style="transition-delay:.05s"><div class="j-num">01</div><div class="j-phase">Now · Active</div><h3 class="j-h">Founding & First Product</h3><p class="j-b">Malem Labs is founded. Recova AI development begins. The first line of code, written in Manipur.</p></div>
-      <div class="j-item" data-r="up" style="transition-delay:.1s"><div class="j-num">02</div><div class="j-phase">Near-Term</div><h3 class="j-h">Recova AI Launch</h3><p class="j-b">Recova AI goes live. Organizations begin recovering smarter with our AI-first platform.</p></div>
+      <div class="j-item" data-r="up" style="transition-delay:.1s"><div class="j-num">02</div><div class="j-phase">Near-Term</div><h3 class="j-h">Recova AI Launch</h3><p class="j-b">MFIs and lenders in Manipur and Northeast India start collecting more — fewer late payments, fewer NPAs, same team.</p></div>
       <div class="j-item" data-r="up" style="transition-delay:.15s"><div class="j-num">03</div><div class="j-phase">Growth Phase</div><h3 class="j-h">Scale & Expand</h3><p class="j-b">Grow across industries. Build a world-class team from Manipur. Expand our product portfolio.</p></div>
       <div class="j-item" data-r="up" style="transition-delay:.2s"><div class="j-num">04</div><div class="j-phase">The Vision</div><h3 class="j-h">Global Tech Giant</h3><p class="j-b">A globally recognized technology company — built from Manipur, respected everywhere on Earth.</p></div>
     </div>
